@@ -3,4 +3,10 @@ kind: MeshProfile
 metadata:
   name: mp-1
   project: rakshith
-spec: {}
+spec:
+  installationParams:
+    certType: SelfSigned
+    resourceQuota:
+      cpuRequests: 500m
+      memoryRequests: 2048Mi
+  version: v1
