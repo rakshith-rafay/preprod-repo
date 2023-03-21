@@ -1,0 +1,13 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: agent-1
+  project: rakshith
+spec:
+  active: true
+  sharing:
+    enabled: true
+    projects:
+    - name: bootstrap-test
+  type: Docker
+  version: r1.23.0
