@@ -27,7 +27,4 @@ spec:
       objectName: gajanan
     secretName: gajanan-prod12
     type: Opaque
-  sharing:
-    enabled: true
-    projects:
-    - name: aa1
+  sharing: {}
