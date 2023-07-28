@@ -1,0 +1,22 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  description: 1.20.0
+  name: sm-profile-minimal
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.20.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  serviceMesh:
+    policies:
+    - name: enable-strict-mtls
+      version: version-1667990712
+    profile:
+      name: istio-profile-minimal
+      version: version-1668834562
+  type: custom
+  version: v4-1.20.0

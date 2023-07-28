@@ -1,0 +1,36 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: vault-test-aks-bp-1
+  project: rakshith-ws
+spec:
+  base:
+    name: default-aks
+    version: 1.22.0
+  customAddons:
+  - name: cert-manager
+    version: cert-manager-version-1
+  - dependsOn:
+    - cert-manager
+    name: istio-csr
+    version: v1-istio-csr
+  - dependsOn:
+    - cert-manager
+    name: issuer
+    version: v1
+  - name: istio-secret-id
+    version: istio-secert-id-version-1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  serviceMesh:
+    profile:
+      name: certmanager-profile
+      version: v1.3
+  type: custom
+  version: v2

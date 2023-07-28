@@ -1,0 +1,24 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: os-pip-1
+  project: rakshith-ws
+spec:
+  active: true
+  stages:
+  - config:
+      destinationRepo: {}
+      excludedResources:
+      - name: Workload
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: dir-01
+        repository: prod-repo
+        revision: main
+      systemToGitSync: true
+    name: os-1
+    type: SystemSync

@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: agent-001
+  project: rakshith-ws
+spec:
+  active: true
+  cluster:
+    name: rakshith-prod-aks-cluster-1
+  type: Cluster
+  version: r1.23.0

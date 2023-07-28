@@ -1,0 +1,32 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: deploy-workload-1
+  project: rakshith-ws
+spec:
+  active: true
+  stages:
+  - config:
+      approvers:
+      - userName: rakshith@rafay.co
+      timeout: 0s
+      type: Email
+    name: deploy-workload-1
+    next:
+    - name: deploy-wo
+    type: Approval
+  - config:
+      workload: deploy-workload-1
+    name: deploy-wo
+    next:
+    - name: deploy-wo-temp
+    type: DeployWorkload
+  - config:
+      namespace: aks-ns-2
+      placement:
+        labels:
+        - key: rafay.dev/clusterName
+          value: rakshith-import-aks-prod
+      workloadTemplate: kafka-workload-temp
+    name: deploy-wo-temp
+    type: DeployWorkloadTemplate

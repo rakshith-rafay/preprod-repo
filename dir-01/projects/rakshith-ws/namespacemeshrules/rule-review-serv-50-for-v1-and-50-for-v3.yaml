@@ -1,0 +1,13 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: NamespaceMeshRule
+metadata:
+  name: rule-review-serv-50-for-v1-and-50-for-v3
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/rule-review-serv-50-for-v1-and-50-for-v3/rule-vs-reviews-50-v3.yaml-version-version-1.yaml
+    options: {}
+    type: Yaml
+  version: v1

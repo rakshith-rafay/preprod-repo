@@ -1,0 +1,31 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: bp-multi-cluster
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.18.0
+  customAddons:
+  - name: cert-manager
+    version: cert-manager-version-1
+  - dependsOn:
+    - cert-manager
+    name: istio-csr
+    version: v1-istio-csr
+  - dependsOn:
+    - cert-manager
+    name: issuer
+    version: v1
+  - name: istio-secret-id
+    version: istio-secert-id-version-1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  serviceMesh:
+    profile:
+      name: sm-multi-cluster
+      version: v1
+  type: custom
+  version: v1

@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: WorkloadTemplate
+metadata:
+  name: kafka-workload-temp
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: kafka
+      chartVersion: 22.1.3
+      valuesPaths:
+      - name: file://artifacts/kafka-workload-temp/values (8).yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm

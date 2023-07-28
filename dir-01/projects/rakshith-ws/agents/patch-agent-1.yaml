@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: patch-agent-1
+  project: rakshith-ws
+spec:
+  active: true
+  cluster:
+    name: rakshith-aks-prod
+  type: Cluster
+  version: r1.24.0

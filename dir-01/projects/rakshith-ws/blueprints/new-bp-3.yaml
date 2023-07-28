@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: new-bp-3
+  project: rakshith-ws
+spec:
+  base:
+    name: golden-bp-11
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  opaPolicy:
+    profile:
+      name: default
+      version: version-1664597317
+  type: custom
+  version: v6

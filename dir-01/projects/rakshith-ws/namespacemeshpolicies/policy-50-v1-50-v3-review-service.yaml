@@ -1,0 +1,10 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: NamespaceMeshPolicy
+metadata:
+  name: policy-50-v1-50-v3-review-service
+  project: rakshith-ws
+spec:
+  rules:
+  - name: rule-review-serv-50-for-v1-and-50-for-v3
+    version: v1
+  version: v1

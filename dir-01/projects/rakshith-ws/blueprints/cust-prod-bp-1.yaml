@@ -1,0 +1,24 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: cust-prod-bp-1
+  project: rakshith-ws
+spec:
+  base:
+    name: prod-golden-bp-1
+    version: v3
+  customAddons:
+  - name: cert-manager
+    version: cert-manager-version-1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  opaPolicy:
+    opaPolicy:
+    - name: policy-privileged
+      version: version-1664597317
+    profile:
+      name: default
+      version: version-1664597317
+  type: custom
+  version: v7

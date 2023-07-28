@@ -1,0 +1,12 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: MeshProfile
+metadata:
+  name: demo-vault-installation-profile
+  project: rakshith-ws
+spec:
+  installationParams:
+    certType: CertManager
+    resourceQuota:
+      cpuRequests: 500m
+      memoryRequests: 2048Mi
+  version: v2

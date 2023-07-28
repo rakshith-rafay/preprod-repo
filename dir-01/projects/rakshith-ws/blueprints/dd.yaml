@@ -1,0 +1,7 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: dd
+  project: rakshith-ws
+spec:
+  type: custom

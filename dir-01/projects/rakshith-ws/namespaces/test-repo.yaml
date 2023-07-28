@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: test-repo
+  project: rakshith-ws
+spec:
+  artifact:
+    path:
+      name: rakshith-project/projects/rakshith-ws/namespaces/test-repo.yaml
+    repository: eks-agent-1
+    revision: main
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams:
+    meshEnabled: true
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-prod-eks-cluster
+  resourceQuotas: {}

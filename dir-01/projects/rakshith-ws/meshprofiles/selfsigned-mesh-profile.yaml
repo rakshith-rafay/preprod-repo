@@ -1,0 +1,14 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: MeshProfile
+metadata:
+  name: selfsigned-mesh-profile
+  project: rakshith-ws
+spec:
+  installationParams:
+    certType: SelfSigned
+    resourceQuota:
+      cpuLimits: 1000m
+      cpuRequests: 500m
+      memoryLimits: 4096Mi
+      memoryRequests: 2048Mi
+  version: v1.2

@@ -1,0 +1,11 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: gloomesh
+  project: rakshith-ws
+spec:
+  endpoint: https://storage.googleapis.com/gloo-ee-helm
+  options:
+    caCert:
+      name: ca-cert.pem
+  type: Helm
