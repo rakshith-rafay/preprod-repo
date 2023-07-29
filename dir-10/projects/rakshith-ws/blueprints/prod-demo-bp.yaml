@@ -1,0 +1,22 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: prod-demo-bp
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.18.0
+  defaultAddons:
+    csiSecretStoreConfig:
+      providers: {}
+    enableIngress: true
+  serviceMesh:
+    policies:
+    - name: prod-cluster-policy-2
+      version: v2
+    profile:
+      name: demo-profile-2
+      version: v1
+  type: custom
+  version: v3

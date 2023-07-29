@@ -1,0 +1,10 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: abcd
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: bar

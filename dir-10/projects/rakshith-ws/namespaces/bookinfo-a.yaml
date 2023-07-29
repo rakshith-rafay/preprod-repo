@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: bookinfo-a
+  project: rakshith-ws
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams:
+    meshEnabled: true
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-prod-eks-cluster
+    - key: rafay.dev/clusterName
+      value: rakshith-eks-prod-cluster
+  resourceQuotas: {}

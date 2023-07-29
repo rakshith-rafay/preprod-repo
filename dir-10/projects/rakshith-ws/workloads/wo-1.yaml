@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: wo-1
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://sleep.yaml
+    type: Yaml
+  namespace: csi
+  placement:
+    selector: rafay.dev/clusterName=rakshith-prod-mks-cluster
+  version: v1

@@ -1,0 +1,8 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: docker-prod-agent-01
+  project: rakshith-ws
+spec:
+  type: Docker
+  version: r1.26.0

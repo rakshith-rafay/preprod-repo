@@ -1,0 +1,11 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAProfile
+metadata:
+  name: opa-patch-01
+  project: rakshith-ws
+spec:
+  installationParams:
+    auditInterval: 60
+    constraintViolationsLimit: 20
+  opaVersion: 3.11.0
+  version: v1

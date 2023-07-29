@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: vault
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/vault/vault.yaml
+    type: Yaml
+  namespace: vault
+  placement:
+    selector: rafay.dev/clusterName=rakshith-prod-aks-cluster
+  version: vault-v1

@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: demo-ingress-eks-cluster-bp-1
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.18.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  serviceMesh:
+    profile:
+      name: demo-ingress-eks-profile-1
+      version: v1
+  type: custom
+  version: v1

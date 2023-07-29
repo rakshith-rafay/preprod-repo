@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: label-wo
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/label-wo/label-wo.yaml
+    type: Yaml
+  namespace: label-ns
+  placement:
+    selector: key1,rafay.dev/clusterName=rakshith-eks-prod-cluster
+  version: label-wo-v1

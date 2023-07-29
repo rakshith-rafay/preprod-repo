@@ -1,0 +1,9 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Catalog
+metadata:
+  name: gloomesh
+  project: rakshith-ws
+spec:
+  autoSync: true
+  repository: gloomesh
+  type: HelmRepository

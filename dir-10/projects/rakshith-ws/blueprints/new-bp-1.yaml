@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: new-bp-1
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.18.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  serviceMesh:
+    profile:
+      name: istio-profile-minimal
+      version: version-1664597317
+  type: custom
+  version: v1

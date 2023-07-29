@@ -1,0 +1,14 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: MeshProfile
+metadata:
+  name: stage-profile-1
+  project: rakshith-ws
+spec:
+  installationParams:
+    certType: CertManager
+    resourceQuota:
+      cpuLimits: 1000m
+      cpuRequests: 500m
+      memoryLimits: 4096Mi
+      memoryRequests: 2048Mi
+  version: v2

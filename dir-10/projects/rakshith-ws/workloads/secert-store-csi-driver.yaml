@@ -1,0 +1,21 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: secert-store-csi-driver
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      catalog: csi-driver
+      chartName: secrets-store-csi-driver
+      chartVersion: 1.3.0
+      valuesPaths:
+      - name: file://artifacts/secert-store-csi-driver/values (6).yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: bar
+  placement:
+    selector: rafay.dev/clusterName=rakshith-prod-mks-cluster
+  version: secert-store-csi-driver-v1

@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test-upload
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test-upload/test-upload.yaml
+    type: Yaml
+  namespace: test-upload
+  placement:
+    selector: rafay.dev/clusterName=rakshith-prod-eks-cluster
+  version: test-upload-v1

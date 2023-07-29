@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: custom-vp-1
+  project: rakshith-ws
+spec:
+  base:
+    name: golden-vp1
+    version: v2-withoutsyncsecrets
+  defaultAddons:
+    csiSecretStoreConfig:
+      providers:
+        aws: true
+    enableCsiSecretStore: true
+    enableIngress: true
+    enableMonitoring: true
+  type: custom
+  version: v6

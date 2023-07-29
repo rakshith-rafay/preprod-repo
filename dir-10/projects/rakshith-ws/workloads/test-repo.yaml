@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test-repo
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test-repo/test-repo.yaml
+    type: Yaml
+  namespace: test-repo
+  placement:
+    selector: rafay.dev/clusterName=rakshith-prod-eks-cluster
+  version: test-repo-v1

@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: legacy
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/legacy/legacy.yaml
+    options: {}
+    type: Yaml
+  namespace: legacy
+  placement:
+    selector: rafay.dev/clusterName=rakshith-prod-mks-cluster
+  version: legacy-v6

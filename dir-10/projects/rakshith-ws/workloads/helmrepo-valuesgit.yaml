@@ -1,0 +1,24 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: helmrepo-valuesgit
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      chartName: nginx
+      chartVersion: 13.1.4
+      repository: default-bitnami
+      valuesRef:
+        repository: gajanan-repo
+        revision: main
+        valuesPaths:
+        - name: working-helm/bitnami-nginx/nginx/values.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: foo-1
+  placement:
+    selector: rafay.dev/clusterName=rakshith-prod-eks-cluster
+  version: helmrepo-valuesgit-v2
