@@ -4,4 +4,12 @@ metadata:
   name: os-repo
   project: rakshith-ws
 spec:
+  agents:
+  - name: k8-agent-1-27
+  credentials:
+    password: sealed://credentials.password
+    username: rakshith@rafay.co
+  endpoint: https://github.com/rakshith-rafay/os-repo.git
+  secret:
+    name: file://artifacts/os-repo/sealed-secret.yaml
   type: Git
