@@ -5,7 +5,4 @@ metadata:
   project: rakshith-ws
 spec:
   endpoint: https://storage.googleapis.com/gloo-ee-helm
-  options:
-    caCert:
-      name: ca-cert.pem
   type: Helm
