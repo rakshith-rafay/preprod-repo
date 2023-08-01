@@ -12,5 +12,9 @@ spec:
       - name: file://artifacts/addon-01/values-file-for-cert-manager.yaml
     type: Helm
   namespace: addon-01-ns
-  sharing: {}
+  sharing:
+    enabled: true
+    projects:
+    - name: a1
+  type: custom
   version: v3
