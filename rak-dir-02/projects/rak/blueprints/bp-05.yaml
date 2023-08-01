@@ -4,4 +4,8 @@ metadata:
   name: bp-05
   project: rak
 spec:
+  sharing:
+    enabled: true
+    projects:
+    - name: a1
   type: custom
