@@ -5,6 +5,12 @@ metadata:
   project: rak
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: sleep.yaml
+      repository: os-repo
+      revision: main
     type: Yaml
   namespace: ns-04
+  placement:
+    selector: rafay.dev/clusterName=rakshith-aks-tb-02
