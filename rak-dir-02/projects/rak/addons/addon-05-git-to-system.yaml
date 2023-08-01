@@ -1,0 +1,16 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: addon-05-git-to-system
+  project: rak
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/addon-01/cert-manager-v1.9.1.tgz
+      valuesPaths:
+      - name: file://artifacts/addon-01/values-file-for-cert-manager.yaml
+    type: Helm
+  namespace: addon-01-ns
+  sharing: {}
+  version: v1
