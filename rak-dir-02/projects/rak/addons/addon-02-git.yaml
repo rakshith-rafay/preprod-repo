@@ -17,5 +17,9 @@ spec:
         - name: values-file-for-istio-csr.yaml
     type: Helm
   namespace: ns-01
-  sharing: {}
+  sharing:
+    enabled: true
+    projects:
+    - name: a1
+  type: custom
   version: v3
