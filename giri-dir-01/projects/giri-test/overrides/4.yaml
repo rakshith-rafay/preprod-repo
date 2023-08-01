@@ -1,0 +1,12 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Override
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: valuesFile
+  name: "4"
+  project: giri-test
+spec:
+  resource:
+    type: Addon
+  type: Helm

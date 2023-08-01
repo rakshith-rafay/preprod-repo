@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: redis-addon
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: redis
+      chartVersion: 17.14.3
+    type: Helm
+  namespace: redis-addon
+  sharing: {}
+  version: v1

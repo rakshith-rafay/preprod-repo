@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: app-02
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/app-02/app-02.yaml
+    type: Yaml
+  namespace: ns-05
+  placement:
+    selector: rafay.dev/clusterName=giri-qc-jul24
+  version: app-02-v1-202307241538010000

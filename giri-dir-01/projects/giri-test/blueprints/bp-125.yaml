@@ -1,0 +1,29 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: bp-125
+  project: giri-test
+spec:
+  base:
+    name: default
+    version: 1.25.0
+  costProfile:
+    name: default-cost-profile-azure
+    version: version-1688467051
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  networkPolicy:
+    profile:
+      name: default
+      version: latest
+  opaPolicy:
+    profile:
+      name: default
+      version: latest
+  serviceMesh:
+    profile:
+      name: istio-profile-minimal
+      version: version-1688557041
+  type: custom
+  version: version1

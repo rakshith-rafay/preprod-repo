@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  labels:
+    kubernetes.io/metadata.name: istio-system
+  name: istio-system
+  project: giri-test
+spec:
+  drift:
+    action: Deny
+    enabled: true
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-july6-eks
+    - key: rafay.dev/clusterName
+      value: giri-jul6-eks1

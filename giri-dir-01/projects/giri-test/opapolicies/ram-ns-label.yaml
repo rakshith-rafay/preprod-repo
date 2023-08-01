@@ -1,0 +1,10 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAPolicy
+metadata:
+  name: ram-ns-label
+  project: giri-test
+spec:
+  constraintList:
+  - name: k8-required-label-contraint
+    version: v1-ns-label
+  version: v1

@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: giri-bb
+  project: giri-test
+spec:
+  rules:
+  - name: giri-bb
+    version: v2
+  version: v2

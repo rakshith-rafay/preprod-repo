@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: namespace-network-policy
+  project: giri-test
+spec:
+  rules:
+  - name: ns-swagger
+    version: example-version
+  version: v0

@@ -1,0 +1,49 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: bp-jul31
+  project: giri-test
+spec:
+  base:
+    name: default-aks
+    version: 1.28.0
+  customAddons:
+  - name: redis-addon
+    version: v1
+  - dependsOn:
+    - mysql-addon
+    - redis-addon
+    name: nginx-addon
+    version: v1
+  - dependsOn:
+    - redis-addon
+    name: mysql-addon
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  networkPolicy:
+    policies:
+    - name: mar-ccnp
+      version: v1
+    - name: june-policy
+      version: v22
+    - name: may2-ccnp1
+      version: v1
+    profile:
+      name: default
+      version: latest
+  opaPolicy:
+    opaPolicy:
+    - name: policy-restricted
+      version: version-1690784190
+    profile:
+      name: may
+      version: v1
+  type: custom
+  version: opa

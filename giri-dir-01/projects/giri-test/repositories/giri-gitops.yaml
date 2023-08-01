@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: giri-gitops
+  project: giri-test
+spec:
+  agents:
+  - name: giri-qc
+  credentials:
+    password: sealed://credentials.password
+    username: giri-rafay
+  endpoint: https://github.com/giri-rafay/gitops.git
+  secret:
+    name: file://artifacts/giri-gitops/sealed-secret.yaml
+  type: Git

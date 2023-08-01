@@ -1,0 +1,28 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: rctl-bp
+  project: giri-test
+spec:
+  base:
+    name: default-aks
+    version: 1.27.0
+  defaultAddons:
+    enableIngress: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  drift:
+    action: Deny
+    enabled: true
+  networkPolicy:
+    policies:
+    - name: june-policy
+      version: v1
+    profile:
+      name: july
+      version: v1
+  type: custom
+  version: rctl-bp-version1

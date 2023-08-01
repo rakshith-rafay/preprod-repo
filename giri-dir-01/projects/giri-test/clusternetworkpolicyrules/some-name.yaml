@@ -1,0 +1,19 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: some-name
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: clusterwide-policy.yaml
+      repository: giri-parameters
+      revision: main
+    options: {}
+    type: Yaml
+  sharing:
+    enabled: true
+    projects:
+    - name: giri
+  version: example-version1

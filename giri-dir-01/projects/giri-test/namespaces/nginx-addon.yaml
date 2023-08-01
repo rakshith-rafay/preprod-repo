@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: nginx-addon
+  description: nginx-addon
+  name: nginx-addon
+  project: giri-test
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-jul31-aks
+    - key: rafay.dev/clusterName
+      value: giri-jul31-eks
+  resourceQuotas: {}

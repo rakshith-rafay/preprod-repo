@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: bp-static
+  project: giri-test
+spec:
+  base:
+    name: default-aks
+    version: 1.27.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  type: custom
+  version: V1.27

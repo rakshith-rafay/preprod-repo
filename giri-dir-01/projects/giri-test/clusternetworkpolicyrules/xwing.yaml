@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: xwing
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/xwing/cluster-wide.yaml
+    options: {}
+    type: Yaml
+  version: v1

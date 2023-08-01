@@ -1,0 +1,15 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: giri-gitops
+  project: giri-test
+spec:
+  active: true
+  cluster:
+    name: giri-logs
+  sharing:
+    enabled: true
+    projects:
+    - name: defaultproject
+  type: Cluster
+  version: r1.24.0

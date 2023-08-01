@@ -1,0 +1,12 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: june-policy
+  project: giri-test
+spec:
+  rules:
+  - name: xwing
+    version: v1
+  - name: cluster-scoped-rule
+    version: v2
+  version: v22

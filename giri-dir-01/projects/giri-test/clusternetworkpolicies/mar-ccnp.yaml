@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: mar-ccnp
+  project: giri-test
+spec:
+  rules:
+  - name: mar-ccnpr
+    version: v1
+  version: v2

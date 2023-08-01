@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: nginx-addon
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: nginx
+      chartVersion: 15.1.2
+    type: Helm
+  namespace: nginx-addon
+  sharing: {}
+  version: v1

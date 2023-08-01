@@ -1,0 +1,6 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicyRule
+metadata:
+  name: rule-1
+  project: giri-test
+spec: {}

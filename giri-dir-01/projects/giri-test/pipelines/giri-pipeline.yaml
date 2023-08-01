@@ -1,0 +1,30 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: giri-pipeline
+  project: giri-test
+spec:
+  active: true
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: giri-dir-01
+        repository: os-repo
+        revision: main
+      systemToGitSync: true
+    name: test
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        provider: Github
+        repository: giri-gitops
+        revision: main
+    name: test
+    type: Webhook

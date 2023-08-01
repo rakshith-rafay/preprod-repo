@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: xwing-policy
+  project: giri-test
+spec:
+  rules:
+  - name: xwing-ns
+    version: v1
+  version: v1

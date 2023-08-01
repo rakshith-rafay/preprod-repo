@@ -1,0 +1,12 @@
+apiVersion: cost.k8smgmt.io/v3
+kind: CostProfile
+metadata:
+  name: prodile-aks-01
+  project: giri-test
+spec:
+  installationParams:
+    azure:
+      customPricing:
+        cloudCredentialsName: giri-aks
+  providerType: azure
+  version: v1

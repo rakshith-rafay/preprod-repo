@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: nginx-continuous
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: nginx
+      chartVersion: 15.1.2
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: jul31-app
+  placement:
+    selector: app=nginx
+  version: nginx-continuous-v1-202307310558110000

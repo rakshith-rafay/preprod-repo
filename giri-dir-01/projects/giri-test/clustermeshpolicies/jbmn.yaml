@@ -1,0 +1,6 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: ClusterMeshPolicy
+metadata:
+  name: jbmn
+  project: giri-test
+spec: {}

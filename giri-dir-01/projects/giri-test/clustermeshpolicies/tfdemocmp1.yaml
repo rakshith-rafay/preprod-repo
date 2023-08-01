@@ -1,0 +1,10 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: ClusterMeshPolicy
+metadata:
+  name: tfdemocmp1
+  project: giri-test
+spec:
+  rules:
+  - name: enable-strict-mtls
+    version: version-1684213754
+  version: v0

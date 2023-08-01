@@ -1,0 +1,14 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAConstraintTemplate
+metadata:
+  labels:
+    rafay.dev/opa: template
+  name: ns1
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/ns1/opa-required-labels.yaml
+    options: {}
+    type: Yaml

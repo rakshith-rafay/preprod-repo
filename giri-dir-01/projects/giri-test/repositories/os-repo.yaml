@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: os-repo
+  project: giri-test
+spec:
+  agents:
+  - name: az-agent-02
+  credentials:
+    password: sealed://credentials.password
+    username: rakshith@rafay.co
+  endpoint: https://github.com/rakshith-rafay/preprod-repo.git
+  secret:
+    name: file://artifacts/os-repo/sealed-secret.yaml
+  type: Git

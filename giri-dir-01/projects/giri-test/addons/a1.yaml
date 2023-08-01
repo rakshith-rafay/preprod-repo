@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: a1
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      catalog: default-aqua
+      chartName: gateway
+      chartVersion: 2022.4.12
+    type: Helm
+  namespace: giri-ns
+  sharing: {}
+  version: version1

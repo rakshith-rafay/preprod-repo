@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: giri-bb
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/giri-bb/cluster-wide-rule.yaml
+    options: {}
+    type: Yaml
+  version: v2

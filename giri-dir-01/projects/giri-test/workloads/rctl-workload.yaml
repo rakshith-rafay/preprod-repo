@@ -1,0 +1,18 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: rctl-workload
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://http-sw-app.yaml
+    options: {}
+    type: Yaml
+  namespace: new
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-jul6-aks
+  version: v1

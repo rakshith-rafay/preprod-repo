@@ -1,0 +1,10 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: NamespaceMeshPolicy
+metadata:
+  name: tfdemonmp1
+  project: giri-test
+spec:
+  rules:
+  - name: enable-strict-mtls
+    version: version-1683781826
+  version: v0

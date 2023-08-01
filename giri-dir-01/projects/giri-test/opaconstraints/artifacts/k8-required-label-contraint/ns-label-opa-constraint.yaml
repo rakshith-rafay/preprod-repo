@@ -1,0 +1,17 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sRequiredLabels
+metadata:
+  name: all-must-have-owner
+spec:
+  #enforcementAction: dryrun
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Namespace"]
+  parameters:
+    message: "All namespaces must have an `owner` and `CostCenter` labels"
+    labels:
+      - key: owner
+        allowedRegex: ""
+      - key: CostCenter
+        allowedRegex: ""

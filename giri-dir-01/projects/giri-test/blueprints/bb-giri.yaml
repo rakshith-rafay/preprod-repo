@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: bb-giri
+  project: giri-test
+spec:
+  base:
+    name: default
+    version: 1.27.0
+  costProfile:
+    name: default-cost-profile-aws
+    version: version-1688467051
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  networkPolicy:
+    profile:
+      name: giri-bb
+      version: v1
+  type: custom
+  version: july21

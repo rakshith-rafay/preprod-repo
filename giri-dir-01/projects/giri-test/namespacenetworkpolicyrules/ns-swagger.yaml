@@ -1,0 +1,19 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicyRule
+metadata:
+  name: ns-swagger
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: xwing-block.yaml
+      repository: giri-parameters
+      revision: main
+    options: {}
+    type: Yaml
+  sharing:
+    enabled: true
+    projects:
+    - name: giri
+  version: example-version

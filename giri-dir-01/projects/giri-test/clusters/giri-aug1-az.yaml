@@ -1,0 +1,56 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: giri-aug1-az
+  project: giri-test
+spec:
+  blueprintConfig:
+    name: bp-aug1
+    version: v1
+  cloudCredentials: giri-aks
+  config:
+    kind: aksClusterConfig
+    metadata:
+      name: giri-aug1-az
+    spec:
+      managedCluster:
+        apiVersion: "2022-07-01"
+        identity:
+          type: SystemAssigned
+        location: centralindia
+        properties:
+          apiServerAccessProfile:
+            enablePrivateCluster: false
+          dnsPrefix: giri-aug1-az-dns
+          kubernetesVersion: 1.26.3
+          networkProfile:
+            loadBalancerSku: standard
+            networkPlugin: kubenet
+            networkPolicy: calico
+        sku:
+          name: Basic
+          tier: Free
+        type: Microsoft.ContainerService/managedClusters
+      nodePools:
+      - apiVersion: "2022-07-01"
+        location: centralindia
+        name: primary
+        properties:
+          count: 3
+          enableAutoScaling: true
+          maxCount: 3
+          maxPods: 110
+          minCount: 3
+          mode: System
+          orchestratorVersion: 1.26.3
+          osType: Linux
+          type: VirtualMachineScaleSets
+          vmSize: Standard_B2ms
+        type: Microsoft.ContainerService/managedClusters/agentPools
+      resourceGroupName: giri
+  proxyConfig: {}
+  sharing:
+    enabled: true
+    projects:
+    - name: giri-aug
+  type: aks

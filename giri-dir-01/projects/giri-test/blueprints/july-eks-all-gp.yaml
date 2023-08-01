@@ -1,0 +1,30 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: july-eks-all-gp
+  project: giri-test
+spec:
+  base:
+    name: default
+    version: 1.27.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  namespaceConfig:
+    enableSync: true
+  networkPolicy:
+    policies:
+    - name: june-policy
+      version: v1
+    profile:
+      name: default
+      version: latest
+  opaPolicy:
+    opaPolicy:
+    - name: policy-restricted
+      version: version-1688489382
+    profile:
+      name: default
+      version: latest
+  type: golden
+  version: v4

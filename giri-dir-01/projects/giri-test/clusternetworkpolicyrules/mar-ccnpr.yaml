@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: mar-ccnpr
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/mar-ccnpr/cluster-wide-rule.yaml
+    options: {}
+    type: Yaml
+  version: v1

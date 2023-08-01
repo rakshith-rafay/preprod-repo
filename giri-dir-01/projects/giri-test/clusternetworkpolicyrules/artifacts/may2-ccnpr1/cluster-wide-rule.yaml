@@ -1,0 +1,16 @@
+apiVersion: 'cilium.io/v2'
+kind: CiliumClusterwideNetworkPolicy
+metadata:
+  name: 'clusterwide-xwing-block'
+spec:
+  endpointSelector:
+    matchLabels:
+      org: empire
+      class: deathstar
+  ingress:
+  - fromEndpoints:
+    - matchLabels:
+        org: empire
+    toPorts:
+    - ports:
+      - port: "80"

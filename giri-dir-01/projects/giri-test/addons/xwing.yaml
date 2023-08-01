@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  description: jjkj
+  name: xwing
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/xwing/http-sw-app.yaml
+    type: Yaml
+  namespace: cilium
+  sharing: {}
+  version: v1

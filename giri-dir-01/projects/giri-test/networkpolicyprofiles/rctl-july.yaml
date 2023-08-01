@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NetworkPolicyProfile
+metadata:
+  name: rctl-july
+  project: giri-test
+spec:
+  installationParams:
+    policyEnforcementMode: default
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'
+  version: giri-prod-rctl-version1

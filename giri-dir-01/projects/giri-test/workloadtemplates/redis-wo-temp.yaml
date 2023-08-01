@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: WorkloadTemplate
+metadata:
+  name: redis-wo-temp
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/redis-wo-temp/redis-15.6.4.tgz
+      valuesPaths:
+      - name: file://artifacts/redis-wo-temp/redis-value.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm

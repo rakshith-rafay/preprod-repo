@@ -1,0 +1,6 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: nwp-policy-1
+  project: giri-test
+spec: {}
