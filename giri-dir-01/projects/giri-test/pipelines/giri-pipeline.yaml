@@ -8,6 +8,8 @@ spec:
   stages:
   - config:
       destinationRepo: {}
+      excludedResources:
+      - name: Addon
       gitToSystemSync: true
       includedResources:
       - name: '*'
