@@ -1,0 +1,16 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: addon-04
+  project: rak
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: sleep.yaml
+      repository: os-repo
+      revision: main
+    type: Yaml
+  namespace: ns-04
+  sharing: {}
+  version: v1
