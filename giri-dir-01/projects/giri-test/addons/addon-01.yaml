@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: addon-01
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/addon-01/sleep.yaml
+    type: Yaml
+  namespace: ns-01
+  sharing: {}
+  version: v1
