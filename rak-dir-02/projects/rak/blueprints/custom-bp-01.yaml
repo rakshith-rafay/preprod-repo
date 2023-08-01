@@ -6,7 +6,7 @@ metadata:
 spec:
   base:
     name: default
-    version: 1.10.0
+    version: 1.27.0
   customAddons:
   - name: addon-06
     version: v1
