@@ -1,0 +1,31 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: custom-bp-01-git-to-system
+  project: rak
+spec:
+  base:
+    name: default
+    version: 1.28.0
+  customAddons:
+  - name: addon-06
+    version: v1
+  - name: addon-05-git-to-system
+    version: v2
+  - name: addon-04-git-to-system
+    version: v1
+  - name: addon-04
+    version: v1
+  - name: addon-03-git-to-system
+    version: v1
+  - name: addon-03
+    version: v1
+  - name: addon-02-git-to-system
+    version: v1
+  - name: addon-01
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  type: custom
+  version: v1
