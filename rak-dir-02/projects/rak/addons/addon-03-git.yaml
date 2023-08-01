@@ -11,4 +11,4 @@ spec:
     type: Yaml
   namespace: ns-03
   sharing: {}
-  version: v1
+  version: v2
