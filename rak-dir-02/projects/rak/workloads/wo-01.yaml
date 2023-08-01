@@ -5,6 +5,15 @@ metadata:
   project: rak
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      chartPath:
+        name: file://artifacts/wo-01/cert-manager-v1.9.1.tgz
+      valuesPaths:
+      - name: file://artifacts/wo-01/values-file-for-cert-manager.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
     type: Helm
   namespace: ns-01
+  placement:
+    selector: rafay.dev/clusterName=rakshith-aks-tb-02
