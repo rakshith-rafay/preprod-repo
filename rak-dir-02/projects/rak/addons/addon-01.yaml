@@ -1,7 +1,7 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Addon
 metadata:
-  name: addon-01     .
+  name: addon-01
   project: rak
 spec:
   artifact:
