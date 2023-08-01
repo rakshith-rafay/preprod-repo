@@ -10,5 +10,8 @@ spec:
       - name: file://artifacts/addon-01/sleep.yaml
     type: Yaml
   namespace: ns-01
-  sharing: {}
+  sharing:
+    enabled: true
+    projects:
+    - name: aaaa1
   version: v1
