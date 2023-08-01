@@ -17,3 +17,4 @@ spec:
   namespace: ns-01
   placement:
     selector: rafay.dev/clusterName=rakshith-aks-tb-02
+  version: wo-01-v1-202308011817340000
