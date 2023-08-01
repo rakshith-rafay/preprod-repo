@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: addon-06-git-to-system
+  project: rak
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/addon-06/sleep.yaml
+    type: Yaml
+  namespace: ns-07
+  sharing: {}
+  version: v1
