@@ -18,4 +18,4 @@ spec:
     type: Helm
   namespace: ns-01
   sharing: {}
-  version: v2
+  version: v3
