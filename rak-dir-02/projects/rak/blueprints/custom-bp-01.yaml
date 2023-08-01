@@ -1,0 +1,7 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: custom-bp-01
+  project: rak
+spec:
+  type: custom
