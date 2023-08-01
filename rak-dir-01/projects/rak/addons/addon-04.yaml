@@ -5,7 +5,12 @@ metadata:
   project: rak
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: sleep.yaml
+      repository: os-repo
+      revision: main
     type: Yaml
   namespace: ns-04
   sharing: {}
+  version: v1
