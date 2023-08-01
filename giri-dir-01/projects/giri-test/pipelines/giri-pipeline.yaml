@@ -24,7 +24,7 @@ spec:
   - config:
       repo:
         provider: Github
-        repository: giri-gitops
+        repository: os-repo
         revision: main
     name: test
     type: Webhook
