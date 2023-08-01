@@ -5,6 +5,11 @@ metadata:
   project: rak
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/wo-03/wo-03.yaml
     type: Yaml
   namespace: ns-04
+  placement:
+    selector: rafay.dev/clusterName=rakshith-aks-tb-02
+  version: wo-03-v1-202308011821310000
