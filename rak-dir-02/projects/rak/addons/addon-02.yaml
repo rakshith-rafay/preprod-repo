@@ -17,5 +17,8 @@ spec:
         - name: values-file-for-cert-manager.yaml
     type: Helm
   namespace: ns-01
-  sharing: {}
+  sharing:
+    enabled: true
+    projects:
+    - name: defaultproject
   version: v1
