@@ -1,0 +1,11 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: addon-02
+  project: giri-test
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: ns-01
+  sharing: {}
