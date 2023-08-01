@@ -5,7 +5,10 @@ metadata:
   project: rak
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/addon-01/sleep.yaml
     type: Yaml
   namespace: ns-01
   sharing: {}
+  version: v1
