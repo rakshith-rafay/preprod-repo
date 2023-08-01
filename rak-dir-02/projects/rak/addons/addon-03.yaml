@@ -1,0 +1,11 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: addon-03
+  project: rak
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: ns-03
+  sharing: {}
