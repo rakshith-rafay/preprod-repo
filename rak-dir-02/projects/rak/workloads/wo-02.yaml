@@ -5,6 +5,22 @@ metadata:
   project: rak
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      chartPath:
+        name: chartmuseum-3.4.0.tgz
+      repository: os-repo
+      revision: main
+      valuesPaths:
+      - {}
+      valuesRef:
+        repository: os-repo
+        revision: main
+        valuesPaths:
+        - name: chartmuseum-values.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
     type: Helm
   namespace: ns-03
+  placement:
+    selector: rafay.dev/clusterName=rakshith-aks-tb-02
