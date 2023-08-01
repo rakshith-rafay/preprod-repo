@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: wo-03-git
+  project: giri-test
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/wo-01/wo-01.yaml
+    type: Yaml
+  namespace: ns-01
+  placement:
+    selector: rafay.dev/clusterName=giri-aug1-az
+  version: wo-01-v1-202308011850000000
