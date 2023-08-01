@@ -13,4 +13,4 @@ spec:
     type: Helm
   namespace: addon-01-ns
   sharing: {}
-  version: v1
+  version: v2
