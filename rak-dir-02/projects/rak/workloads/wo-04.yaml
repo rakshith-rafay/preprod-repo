@@ -1,0 +1,10 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: wo-04
+  project: rak
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: ns-04
