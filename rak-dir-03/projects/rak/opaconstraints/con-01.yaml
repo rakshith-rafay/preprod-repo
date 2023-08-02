@@ -5,8 +5,12 @@ metadata:
   project: rak
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/con-01/rafay-gatekeeper-allowedrepos-constraint-v1-upload
+          (1).yaml
     options: {}
     type: Yaml
+  published: true
   templateName: template-01
-  version: v1
+  version: v2
