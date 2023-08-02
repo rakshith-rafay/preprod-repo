@@ -4,4 +4,9 @@ metadata:
   name: con-01
   project: rak
 spec:
+  artifact:
+    artifact: {}
+    options: {}
+    type: Yaml
   templateName: template-01
+  version: v1
