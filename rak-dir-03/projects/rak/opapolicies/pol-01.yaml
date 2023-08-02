@@ -1,0 +1,10 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAPolicy
+metadata:
+  name: pol-01
+  project: rak
+spec:
+  constraintList:
+  - name: con-01
+    version: v2
+  version: v1
