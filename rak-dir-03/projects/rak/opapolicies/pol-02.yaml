@@ -1,0 +1,6 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAPolicy
+metadata:
+  name: pol-02
+  project: rak
+spec: {}
