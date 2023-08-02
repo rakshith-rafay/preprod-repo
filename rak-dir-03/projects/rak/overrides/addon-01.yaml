@@ -1,0 +1,12 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Override
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: addon-01
+  project: rak
+spec:
+  resource:
+    type: Addon
+  type: Yaml
