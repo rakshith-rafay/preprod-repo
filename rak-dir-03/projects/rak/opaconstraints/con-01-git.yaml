@@ -1,0 +1,16 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAConstraint
+metadata:
+  name: con-01-git
+  project: rak
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/con-01/rafay-gatekeeper-allowedrepos-constraint-v1-upload
+          (1).yaml
+    options: {}
+    type: Yaml
+  published: true
+  templateName: template-01
+  version: v2
