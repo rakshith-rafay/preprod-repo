@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: wo-04
+  project: rak
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: sleep.yaml
+      repository: os-repo
+      revision: main
+    type: Yaml
+  namespace: ns-04
+  placement:
+    selector: rafay.dev/clusterName=rakshith-aks-tb-02
+  version: wo-04-v1-202308011822040000

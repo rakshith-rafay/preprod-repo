@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: wo-05
+  project: rak
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: kafka
+      chartVersion: 23.0.7
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: ns-05
+  placement:
+    selector: rafay.dev/clusterName=rakshith-aks-tb-02
+  version: wo-05-v1-202308011823070000

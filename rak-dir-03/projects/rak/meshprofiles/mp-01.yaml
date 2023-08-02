@@ -1,0 +1,12 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: MeshProfile
+metadata:
+  name: mp-01
+  project: rak
+spec:
+  installationParams:
+    certType: CertManager
+    resourceQuota:
+      cpuRequests: 500m
+      memoryRequests: 2048Mi
+  version: v1

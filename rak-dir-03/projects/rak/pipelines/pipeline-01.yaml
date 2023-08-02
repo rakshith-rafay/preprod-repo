@@ -1,0 +1,30 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: pipeline-01
+  project: rak
+spec:
+  active: true
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: rak-dir-03
+        repository: os-repo
+        revision: main
+      systemToGitSync: true
+    name: p1
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        provider: Github
+        repository: os-repo
+        revision: main
+    name: tt1
+    type: Webhook
