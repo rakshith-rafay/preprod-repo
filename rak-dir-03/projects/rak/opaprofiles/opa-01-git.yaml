@@ -11,5 +11,5 @@ spec:
   sharing:
     enabled: true
     projects:
-    - name: '*'
+    - name: 'aa1'
   version: v1
