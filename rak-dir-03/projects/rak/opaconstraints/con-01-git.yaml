@@ -13,4 +13,4 @@ spec:
     type: Yaml
   published: true
   templateName: template-01
-  version: v3
+  version: v4
