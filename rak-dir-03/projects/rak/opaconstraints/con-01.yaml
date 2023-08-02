@@ -1,0 +1,7 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAConstraint
+metadata:
+  name: con-01
+  project: rak
+spec:
+  templateName: template-01
