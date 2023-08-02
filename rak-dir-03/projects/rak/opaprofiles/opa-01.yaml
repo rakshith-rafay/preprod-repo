@@ -8,8 +8,4 @@ spec:
     auditInterval: 60
     constraintViolationsLimit: 20
   opaVersion: 3.11.0
-  sharing:
-    enabled: true
-    projects:
-    - name: 'aa1'
   version: v1
