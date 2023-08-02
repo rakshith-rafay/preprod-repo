@@ -12,4 +12,8 @@ spec:
   endpoint: https://github.com/rakshith-rafay/preprod-repo.git
   secret:
     name: file://artifacts/os-repo/sealed-secret.yaml
+  sharing:
+    enabled: true
+    projects:
+    - name: rak-03
   type: Git
