@@ -8,6 +8,8 @@ spec:
   stages:
   - config:
       destinationRepo: {}
+      excludedResources:
+      - name: Workload
       gitToSystemSync: true
       includedResources:
       - name: '*'
