@@ -1,0 +1,14 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAConstraintTemplate
+metadata:
+  labels:
+    rafay.dev/opa: template
+  name: template-01-git
+  project: rak
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/template-01/rafay-gatekeeper-allowedrepos-constraint-template.yaml
+    options: {}
+    type: Yaml
