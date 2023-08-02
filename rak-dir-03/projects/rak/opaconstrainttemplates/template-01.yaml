@@ -1,0 +1,12 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAConstraintTemplate
+metadata:
+  labels:
+    rafay.dev/opa: template
+  name: template-01
+  project: rak
+spec:
+  artifact:
+    artifact: {}
+    options: {}
+    type: Yaml
