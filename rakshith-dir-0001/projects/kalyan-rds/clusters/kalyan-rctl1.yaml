@@ -58,6 +58,22 @@ spec:
         env: qa
       volumeSize: 80
       volumeType: gp3
+    - ami: ami-05a68f290aa68e8f0
+      desiredCapacity: 1
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+          imageBuilder: true
+      instanceTypes:
+      - t3.medium
+      maxSize: 2
+      minSize: 1
+      name: selfmng-amzlinu-cust
+      tags:
+        email: kalyan@rafay.co
+        env: qa
+      volumeSize: 80
+      volumeType: gp3
     metadata:
       name: kalyan-rctl1
       region: us-west-2
@@ -83,6 +99,23 @@ spec:
       name: selfmng-ubunt-custami
       overrideBootstrapCommand: |
         [Ubuntu]
+      tags:
+        email: kalyan@rafay.co
+        env: qa
+      volumeSize: 80
+      volumeType: gp3
+    - ami: ami-05a68f290aa68e8f0
+      desiredCapacity: 1
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+          imageBuilder: true
+      instancesDistribution:
+        instanceTypes:
+        - t3.medium
+      maxSize: 2
+      minSize: 1
+      name: realselfmng-amzlin-custm
       tags:
         email: kalyan@rafay.co
         env: qa
