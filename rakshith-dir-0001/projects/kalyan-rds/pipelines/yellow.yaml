@@ -4,6 +4,7 @@ metadata:
   name: yellow
   project: kalyan-rds
 spec:
+  active: true
   stages:
   - config:
       destinationRepo: {}
