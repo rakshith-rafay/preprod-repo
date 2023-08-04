@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicyRule
+metadata:
+  name: xwing-block1
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/xwing-block1/xwing-block-rule.yaml
+    options: {}
+    type: Yaml
+  version: v1

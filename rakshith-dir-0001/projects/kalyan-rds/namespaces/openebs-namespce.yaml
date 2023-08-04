@@ -1,0 +1,23 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: openebs-namespce
+  project: kalyan-rds
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: kalyan-mks-defbp1
+    - key: rafay.dev/clusterName
+      value: mks-defbp-sep22
+    - key: rafay.dev/clusterName
+      value: mks-custom-defups-sep23
+    - key: rafay.dev/clusterName
+      value: mks-custominimal-sep23
+    - key: rafay.dev/clusterName
+      value: kalyn-gfs-qcmigrate
+  resourceQuotas: {}

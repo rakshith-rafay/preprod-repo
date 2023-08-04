@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: ram-wk1
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/ram-wk1/ram-wk1.yaml
+    type: Yaml
+  namespace: ram-ns1
+  placement:
+    selector: rafay.dev/clusterName in (kalyn-gfs-qcmigrate,kalyn-mks-octrelease1)
+  version: ram-wk1-v2

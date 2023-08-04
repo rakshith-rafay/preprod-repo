@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: service-mesh-bp-1
+  project: kalyan-rds
+spec:
+  base:
+    name: default
+    version: 1.19.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  serviceMesh:
+    policies:
+    - name: enable-strict-mtls
+      version: version-1666460522
+    profile:
+      name: istio-profile-minimal
+      version: version-1666460522
+  type: custom
+  version: v2

@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: ram-nexus-repo
+  project: kalyan-rds
+spec:
+  agents:
+  - {}
+  credentials:
+    password: sealed://credentials.password
+    username: admin
+  endpoint: https://repo.dev.rafay-edge.net/repository/ram-helmrepo/
+  secret:
+    name: file://artifacts/ram-nexus-repo/sealed-secret.yaml
+  type: Helm

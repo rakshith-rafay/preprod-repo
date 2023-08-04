@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: ram-bp2
+  project: kalyan-rds
+spec:
+  base:
+    name: default
+    version: 1.19.0
+  customAddons:
+  - name: ram-catalog-addom
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  type: custom
+  version: v 1-custom-addon

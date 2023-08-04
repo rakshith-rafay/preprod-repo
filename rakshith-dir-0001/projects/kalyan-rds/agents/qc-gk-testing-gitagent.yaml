@@ -1,0 +1,9 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: qc-gk-testing-gitagent
+  project: kalyan-rds
+spec:
+  active: true
+  type: Docker
+  version: r1.27.0

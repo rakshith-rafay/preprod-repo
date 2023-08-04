@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: git-fayas
+  project: kalyan-rds
+spec:
+  agents:
+  - name: agent-2
+  credentials:
+    password: sealed://credentials.password
+    username: rakshith@rafay.co
+  endpoint: https://github.com/rakshith-rafay/os-repo.git
+  secret:
+    name: file://artifacts/git-fayas/sealed-secret.yaml
+  type: Git

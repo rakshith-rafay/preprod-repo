@@ -1,0 +1,10 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: infra-qe
+  project: kalyan-rds
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  resourceQuotas: {}

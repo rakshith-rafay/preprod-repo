@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: gke-mysql
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/gke-mysql/gke-mysql.yaml
+    type: Yaml
+  namespace: ns1
+  placement:
+    selector: rafay.dev/clusterName=gkaly-regnalgke-rctl
+  version: gke-mysql-v1

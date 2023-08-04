@@ -1,0 +1,14 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: wk-wizard-fayas
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/wk-wizard-fayas/wk-wizard-fayas.yaml
+    type: Yaml
+  namespace: fayas-ns
+  placement:
+    selector: rafay.dev/clusterName=kalyn-gfs-qcmigrate

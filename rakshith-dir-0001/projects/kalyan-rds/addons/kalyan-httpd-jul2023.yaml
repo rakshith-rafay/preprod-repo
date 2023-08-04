@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: kalyan-httpd-jul2023
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/kalyan-httpd-jul2023/httpd-2.yaml
+    type: Yaml
+  namespace: infra-qe
+  sharing: {}
+  version: v1

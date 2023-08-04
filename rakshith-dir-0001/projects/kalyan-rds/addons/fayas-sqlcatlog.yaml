@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: fayas-sqlcatlog
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: mysql
+      chartVersion: 9.4.1
+    type: Helm
+  namespace: fayas-ns
+  sharing: {}

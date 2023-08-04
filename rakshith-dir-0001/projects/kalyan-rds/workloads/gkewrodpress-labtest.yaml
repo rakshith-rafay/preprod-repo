@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: gkewrodpress-labtest
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/gkewrodpress-labtest/gkewrodpress-labtest.yaml
+    type: Yaml
+  namespace: ns1
+  placement:
+    selector: rafay.dev/clusterName=kalyanprivatenov12
+  version: gkewrodpress-labtest-v1

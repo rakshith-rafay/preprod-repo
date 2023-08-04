@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: xwing-ns-blocker
+  project: kalyan-rds
+spec:
+  rules:
+  - name: xwing-block1
+    version: v1
+  version: v1

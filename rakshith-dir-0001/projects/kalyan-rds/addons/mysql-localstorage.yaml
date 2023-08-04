@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: mysql-localstorage
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/mysql-localstorage/mysql-local-storage .yaml
+    options: {}
+    type: Yaml
+  namespace: openebs-namespce
+  sharing: {}
+  version: v1

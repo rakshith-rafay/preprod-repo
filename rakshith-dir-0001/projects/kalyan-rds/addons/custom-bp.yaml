@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: custom-bp
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/custom-bp/httpd-2.yaml
+    options: {}
+    type: Yaml
+  namespace: kalyan-ns
+  sharing: {}
+  version: version1

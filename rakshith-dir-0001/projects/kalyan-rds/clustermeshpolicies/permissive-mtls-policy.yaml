@@ -1,0 +1,10 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: ClusterMeshPolicy
+metadata:
+  name: permissive-mtls-policy
+  project: kalyan-rds
+spec:
+  rules:
+  - name: permissive-mtls
+    version: v1
+  version: v1

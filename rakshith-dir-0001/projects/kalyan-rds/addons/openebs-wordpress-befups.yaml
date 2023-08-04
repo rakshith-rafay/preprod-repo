@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: openebs-wordpress-befups
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/openebs-wordpress-befups/pvc-wordpress-service.yaml
+    options: {}
+    type: Yaml
+  namespace: openebs-namespce
+  sharing: {}
+  version: v1

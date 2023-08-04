@@ -1,0 +1,24 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: openebs-customdefup
+  project: kalyan-rds
+spec:
+  base:
+    name: default
+    version: 1.17.1
+  customAddons:
+  - name: openebs-mysql-beforeups
+    version: v1
+  - name: openebs-wordpress-befups
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    enableRookCeph: true
+  opaPolicy:
+    profile:
+      name: initial--
+      version: initial
+  type: custom
+  version: v2

@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: cluster-pol1
+  project: kalyan-rds
+spec:
+  rules:
+  - name: cluster-rule1
+    version: v1
+  version: v1

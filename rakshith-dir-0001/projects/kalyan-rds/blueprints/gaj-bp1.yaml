@@ -1,0 +1,23 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: gaj-bp1
+  project: kalyan-rds
+spec:
+  base:
+    name: gaj-golden-bp1
+    version: v1
+  customAddons:
+  - name: helmingit
+    version: v1
+  - dependsOn:
+    - nativeyaml
+    name: helminhelm
+    version: v1
+  - name: nativeyaml
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  type: custom
+  version: v2-golden

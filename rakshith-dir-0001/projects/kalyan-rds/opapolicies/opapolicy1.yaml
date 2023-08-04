@@ -1,0 +1,7 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAPolicy
+metadata:
+  name: opapolicy1
+  project: kalyan-rds
+spec:
+  version: v1

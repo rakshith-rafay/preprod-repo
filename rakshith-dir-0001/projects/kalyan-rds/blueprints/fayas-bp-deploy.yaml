@@ -1,0 +1,25 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: fayas-bp-deploy
+  project: kalyan-rds
+spec:
+  base:
+    name: default
+    version: 1.19.0
+  customAddons:
+  - name: foo-strict
+    version: foostrict-v1
+  - name: httpd-2
+    version: httpd2
+  - name: http-deployment
+    version: deployment-v1
+  - name: pvc-wp
+    version: pvc-v1
+  - name: mysql-localstorage
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  type: custom
+  version: v3

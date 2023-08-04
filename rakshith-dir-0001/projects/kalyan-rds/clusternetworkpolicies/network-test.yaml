@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: network-test
+  project: kalyan-rds
+spec:
+  rules:
+  - name: network-test
+    version: v2
+  version: v2

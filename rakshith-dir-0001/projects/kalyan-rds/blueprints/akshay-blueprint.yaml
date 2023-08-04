@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: akshay-blueprint
+  project: kalyan-rds
+spec:
+  base:
+    name: default
+    version: 1.25.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  type: custom
+  version: v1

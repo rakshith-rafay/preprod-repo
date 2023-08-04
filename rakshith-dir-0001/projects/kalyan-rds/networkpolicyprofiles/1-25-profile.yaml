@@ -1,0 +1,9 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NetworkPolicyProfile
+metadata:
+  name: 1-25-profile
+  project: kalyan-rds
+spec:
+  installationParams:
+    policyEnforcementMode: default
+  version: v1

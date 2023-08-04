@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: WorkloadTemplate
+metadata:
+  name: ram-wk-temp
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      catalog: ram-nexus
+      chartName: nginx
+      chartVersion: 12.0.1
+      valuesPaths:
+      - name: file://artifacts/ram-wk-temp/values_12.0.1_NodePort.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm

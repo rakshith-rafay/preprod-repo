@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: agent-2
+  project: kalyan-rds
+spec:
+  active: true
+  cluster:
+    name: kalyaneks-exisvpc
+  type: Cluster
+  version: r1.24.1

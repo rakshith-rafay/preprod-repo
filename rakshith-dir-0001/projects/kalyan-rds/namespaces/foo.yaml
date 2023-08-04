@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: foo
+  project: kalyan-rds
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams:
+    meshEnabled: true
+  networkPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: kalyn-mks-octrelease1
+  resourceQuotas: {}

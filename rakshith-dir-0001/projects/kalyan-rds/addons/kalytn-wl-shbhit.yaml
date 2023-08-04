@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: kalytn-wl-shbhit
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/kalytn-wl-shbhit/httpd-2.yaml
+    options: {}
+    type: Yaml
+  namespace: infra-qe
+  sharing: {}
+  version: version1

@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: pvc-wp
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/pvc-wp/pvc-wordpress-service.yaml
+    type: Yaml
+  namespace: fayas-ns
+  sharing: {}
+  version: pvc-v1

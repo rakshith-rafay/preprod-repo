@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: kalyan-ns
+  project: kalyan-rds
+spec:
+  artifact:
+    path:
+      name: file://kalyan-ns/kalyan-ns.yaml
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: kalyaneks-v123
+    - key: rafay.dev/clusterName
+      value: kalyanv124-awslb
+  resourceQuotas: {}

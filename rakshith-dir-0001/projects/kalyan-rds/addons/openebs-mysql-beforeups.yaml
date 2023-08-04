@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: openebs-mysql-beforeups
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/openebs-mysql-beforeups/pvc-mysql-wp.yaml
+    options: {}
+    type: Yaml
+  namespace: openebs-namespce
+  sharing: {}
+  version: v1

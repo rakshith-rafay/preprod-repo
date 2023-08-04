@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: minimal-custombps
+  project: kalyan-rds
+spec:
+  base:
+    name: minimal
+    version: 1.18.0
+  customAddons:
+  - name: gk-add
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  type: custom
+  version: version1

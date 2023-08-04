@@ -1,0 +1,9 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAProfile
+metadata:
+  name: initial-opapolicy1-v1
+  project: kalyan-rds
+spec:
+  installationParams: {}
+  opaVersion: 3.7.1
+  version: initial

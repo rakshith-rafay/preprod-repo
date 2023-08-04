@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: ram-catalog-addom
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      catalog: ram-nexus
+      chartName: nginx
+      chartVersion: 12.0.1
+      valuesPaths:
+      - name: file://artifacts/ram-catalog-addom/values_12.0.1_NodePort.yaml
+    type: Helm
+  namespace: ram-ns1
+  sharing: {}
+  version: v1

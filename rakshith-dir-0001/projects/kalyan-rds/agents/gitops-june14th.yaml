@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: gitops-june14th
+  project: kalyan-rds
+spec:
+  active: true
+  cluster:
+    name: kalyan-eksqcups
+  type: Cluster
+  version: r1.26.0

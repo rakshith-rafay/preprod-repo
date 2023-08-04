@@ -1,0 +1,15 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: InfraProvisioner
+metadata:
+  name: infra-provision
+  project: kalyan-rds
+spec:
+  config:
+    secretGroups:
+    - psg-1
+    version: 0.14.9
+  folder:
+    name: rakshith
+  repository: git-fayas
+  revision: main
+  type: Terraform

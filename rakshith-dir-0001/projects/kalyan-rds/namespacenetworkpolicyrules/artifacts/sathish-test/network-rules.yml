@@ -1,0 +1,16 @@
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: "network-test"
+spec:
+  endpointSelector:
+    matchLabels:
+      app: hello
+      tier: backend
+      track: stable
+  ingress:
+  - fromEndpoints:
+    - matchLabels:
+        app: hello
+        tier: frontend
+        track: stable

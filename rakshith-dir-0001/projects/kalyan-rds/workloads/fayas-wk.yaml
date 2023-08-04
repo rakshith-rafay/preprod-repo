@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: fayas-wk
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/fayas-wk/simple-chart.tgz
+    options:
+      maxHistory: 10
+      resetValues: true
+      timeout: 5m0s
+    type: Helm
+  namespace: fayas-ns
+  placement:
+    selector: rafay.dev/clusterName=kalyn-gfs-qcmigrate
+  version: fayas-wk-v2

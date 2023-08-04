@@ -1,0 +1,15 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: SecretGroup
+metadata:
+  name: psg-1
+  project: kalyan-rds
+spec:
+  secret:
+    name: file://artifacts/psg-1/sealed-secret.yaml
+  secrets:
+  - filePath: ./.aws/credentials
+    secret: sealed://secret.0
+  - filePath: ./.ssh/id_rsa
+    secret: sealed://secret.1
+  - filePath: ./.ssh/id_rsa.pub
+    secret: sealed://secret.2

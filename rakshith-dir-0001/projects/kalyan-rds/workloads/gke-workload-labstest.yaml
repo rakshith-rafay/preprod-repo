@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: gke-workload-labstest
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/gke-workload-labstest/gke-workload-labstest.yaml
+    type: Yaml
+  namespace: ns1
+  placement:
+    selector: cluster-type=gke-cluster
+  version: gke-workload-labstest-v1

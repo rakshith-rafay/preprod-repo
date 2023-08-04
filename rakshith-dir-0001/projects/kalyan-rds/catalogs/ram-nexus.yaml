@@ -1,0 +1,9 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Catalog
+metadata:
+  name: ram-nexus
+  project: kalyan-rds
+spec:
+  autoSync: true
+  repository: ram-nexus-repo
+  type: HelmRepository

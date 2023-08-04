@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kalyan-ns
+  labels:
+    env: dev
+    priority: high
+    sevirity: low
+  annotations:
+    akey1: avalue1
+    akey2: avalue2
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: object-counts
+  namespace: kalyan-ns
+spec:
+  hard:
+    configmaps: "10"
+    persistentvolumeclaims: "4"
+    pods: "4"
+    replicationcontrollers: "20"
+    secrets: "10"
+    services: "10"
+    services.loadbalancers: "2"
+    requests.cpu: "1"
+    requests.memory: 1Gi
+    limits.cpu: "2"
+    limits.memory: 2Gi
+    requests.nvidia.com/gpu: 4
+---
+apiVersion: "v1"
+kind: "LimitRange"
+metadata:
+  name: limit-range-sample
+  namespace: kalyan-ns
+spec:
+  limits:
+    - type: "Pod"
+      max:
+        cpu: "2" 
+        memory: 1Gi
+      min:
+        cpu: 200m
+        memory: 6Mi
+    - type: Container
+      max:
+        cpu: "2" 
+        memory: 1Gi
+      min:
+        cpu: 100m
+        memory: 4Mi
+      default:
+        cpu: 300m
+        memory: 200Mi
+      defaultRequest:
+        cpu: 200m
+        memory: 100Mi
+      maxLimitRequestRatio:
+        cpu: "10"

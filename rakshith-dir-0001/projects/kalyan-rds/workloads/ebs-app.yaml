@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: ebs-app
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/ebs-app/ebs-app.yaml
+    type: Yaml
+  namespace: gk-ns
+  placement:
+    selector: rafay.dev/clusterName=kalyan-eks-migrate3
+  version: ebs-app-v5

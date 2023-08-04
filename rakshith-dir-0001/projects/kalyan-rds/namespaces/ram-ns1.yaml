@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: ram-ns1
+  project: kalyan-rds
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: kalyn-gfs-qcmigrate
+    - key: rafay.dev/clusterName
+      value: kalyn-mks-octrelease1
+  resourceQuotas: {}

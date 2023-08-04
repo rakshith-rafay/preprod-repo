@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: nativeyaml
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/nativeyaml/nginx-workload.yaml
+    type: Yaml
+  namespace: bar
+  sharing: {}
+  version: v1

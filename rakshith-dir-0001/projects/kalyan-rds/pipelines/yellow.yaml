@@ -1,0 +1,29 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: yellow
+  project: kalyan-rds
+spec:
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: rakshith-dir-0001
+        repository: os-repo
+        revision: main
+      systemToGitSync: true
+    name: ttt
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        provider: Github
+        repository: os-repo
+        revision: main
+    name: tttt
+    type: Webhook

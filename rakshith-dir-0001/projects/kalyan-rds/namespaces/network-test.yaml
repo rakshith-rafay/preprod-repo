@@ -1,0 +1,22 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: network-test
+  project: kalyan-rds
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  networkPolicyParams:
+    networkPolicyEnabled: true
+    policies:
+    - name: sathish-network-test
+      version: v1
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: kalyan-2selfmngd-ubunt
+    - key: rafay.dev/clusterName
+      value: sathish-nw-policy-test
+  resourceQuotas: {}

@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: netpol-bp
+  project: kalyan-rds
+spec:
+  base:
+    name: default
+    version: 1.19.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  networkPolicy:
+    policies:
+    - name: cluster-pol1
+      version: v1
+    profile:
+      name: 1-25-profile
+      version: v1
+  type: custom
+  version: v1

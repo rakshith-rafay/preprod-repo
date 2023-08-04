@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: openebs-wordpress
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/openebs-wordpress/openebs-wordpress.yaml
+    options: {}
+    type: Yaml
+  namespace: openebs-namespce
+  placement:
+    selector: rafay.dev/clusterName in (mks-custom-defups-sep23,mks-custominimal-sep23)
+  version: openebs-wordpress-v3

@@ -1,0 +1,20 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: ram-wk-catalog-nginx
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      catalog: ram-nexus
+      chartName: nginx
+      chartVersion: 12.0.1
+      valuesPaths:
+      - name: file://artifacts/ram-wk-catalog-nginx/values_12.0.1_NodePort.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: ram-ns1
+  placement:
+    selector: rafay.dev/clusterName in (kalyn-gfs-qcmigrate,kalyn-mks-octrelease1)

@@ -1,0 +1,21 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: kalyan-aws-lb-rafay
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      catalog: default-helm
+      chartName: aws-load-balancer-controller
+      chartVersion: 1.4.8
+      valuesPaths:
+      - name: file://artifacts/kalyan-aws-lb-rafay/albc.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: kalyan-ns
+  placement:
+    selector: rafay.dev/clusterName=kalyanv124-awslb
+  version: kalyan-aws-lb-rafay-v4-202305081653210000

@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: qe-kalyan
+  project: kalyan-rds
+spec:
+  artifact:
+    path:
+      name: file://qe-kalyan/qe-kalyan.yaml
+  limitRange:
+    container: {}
+    pod: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: aks3-dec6th
+  resourceQuotas: {}

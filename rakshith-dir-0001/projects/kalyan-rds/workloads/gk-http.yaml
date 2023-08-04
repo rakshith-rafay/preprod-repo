@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: gk-http
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/gk-http/gk-http.yaml
+    options: {}
+    type: Yaml
+  namespace: kalyan-ns
+  placement:
+    selector: rafay.dev/clusterName=qc-eks-gk-apr13
+  version: gk-http-v2

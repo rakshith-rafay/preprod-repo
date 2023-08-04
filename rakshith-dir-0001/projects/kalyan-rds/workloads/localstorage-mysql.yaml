@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: localstorage-mysql
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/localstorage-mysql/localstorage-mysql.yaml
+    options: {}
+    type: Yaml
+  namespace: openebs-namespce
+  placement:
+    selector: rafay.dev/clusterName=kalyan-ec2mks-upgradecheck

@@ -1,0 +1,13 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: MeshProfile
+metadata:
+  name: installation-profile
+  project: kalyan-rds
+spec:
+  installationParams:
+    certType: CertManager
+    enableIngress: true
+    resourceQuota:
+      cpuRequests: 500m
+      memoryRequests: 2048Mi
+  version: v2

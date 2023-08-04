@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: httpd-2
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/httpd-2/httpd-2.yaml
+    type: Yaml
+  namespace: fayas-ns
+  sharing: {}
+  version: httpd2

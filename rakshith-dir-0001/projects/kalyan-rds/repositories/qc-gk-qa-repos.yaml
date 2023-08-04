@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: qc-gk-qa-repos
+  project: kalyan-rds
+spec:
+  agents:
+  - name: qc-gk-testing-gitagent
+  credentials:
+    password: sealed://credentials.password
+    username: kalyan-rafay
+  endpoint: https://github.com/kalyan-rafay/qc-gk-syssync-qa.git
+  secret:
+    name: file://artifacts/qc-gk-qa-repos/sealed-secret.yaml
+  type: Git

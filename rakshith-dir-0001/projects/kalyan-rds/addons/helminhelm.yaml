@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: helminhelm
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      chartName: nginx
+      chartVersion: 13.2.11
+      repository: default-bitnami
+    type: Helm
+  namespace: bar
+  sharing: {}
+  version: v1

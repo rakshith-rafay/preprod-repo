@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: ns1
+  project: kalyan-rds
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: kalyn-import-july21eks
+    - key: rafay.dev/clusterName
+      value: gkaly-regnalgke-rctl
+    - key: rafay.dev/clusterName
+      value: kalyanprivatenov12
+  resourceQuotas: {}

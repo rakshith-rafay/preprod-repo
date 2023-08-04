@@ -1,0 +1,14 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: eks-mysql-pvc
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/eks-mysql-pvc/eks-mysql-pvc.yaml
+    type: Yaml
+  namespace: gk-ns
+  placement:
+    selector: rafay.dev/clusterName=kalyan-qc-mar21

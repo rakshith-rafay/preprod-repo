@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: http-deployment
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/http-deployment/httpd-deployment.yaml
+    type: Yaml
+  namespace: fayas-ns
+  sharing: {}
+  version: deployment-v1

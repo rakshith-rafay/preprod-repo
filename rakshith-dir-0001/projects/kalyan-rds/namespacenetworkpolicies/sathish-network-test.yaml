@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: sathish-network-test
+  project: kalyan-rds
+spec:
+  rules:
+  - name: sathish-test
+    version: v4
+  version: v2

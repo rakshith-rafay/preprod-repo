@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: helmingit
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: working-helm/bitnami-nginx/nginx-9.5.8.tgz
+      repository: gajanan-test-repo
+      revision: main
+      valuesPaths:
+      - {}
+    type: Helm
+  namespace: bar
+  sharing: {}
+  version: v1

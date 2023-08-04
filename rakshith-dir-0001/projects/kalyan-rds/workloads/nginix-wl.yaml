@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: nginix-wl
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/nginix-wl/nginix-wl.yaml
+    options: {}
+    type: Yaml
+  namespace: kalyan-g
+  placement:
+    selector: rafay.dev/clusterName=qc-eks-gk-apr13
+  version: nginix-wl-v2

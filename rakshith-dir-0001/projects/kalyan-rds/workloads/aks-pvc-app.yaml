@@ -1,0 +1,14 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: aks-pvc-app
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/aks-pvc-app/aks-pvc-app.yaml
+    type: Yaml
+  namespace: gk-ns
+  placement:
+    selector: rafay.dev/clusterName=kalyanaks-1jan20

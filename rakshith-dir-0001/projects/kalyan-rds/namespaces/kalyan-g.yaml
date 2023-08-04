@@ -1,0 +1,33 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: kalyan-g
+  project: kalyan-rds
+spec:
+  artifact:
+    path:
+      name: file://kalyan-g/kalyan-g.yaml
+  limitRange:
+    container: {}
+    pod: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: azure-rds-nov30
+    - key: rafay.dev/clusterName
+      value: azurecni-kal
+    - key: rafay.dev/clusterName
+      value: kal-rdsups-nov29
+    - key: rafay.dev/clusterName
+      value: aks2-dec3-kalqc
+    - key: rafay.dev/clusterName
+      value: aksv20-kalyan-dec3
+    - key: rafay.dev/clusterName
+      value: aks8-jw-kalyan
+    - key: rafay.dev/clusterName
+      value: eks-cluster
+    - key: rafay.dev/clusterName
+      value: dec6th-aks1
+    - key: rafay.dev/clusterName
+      value: qc-eks-gk-apr13
+  resourceQuotas: {}

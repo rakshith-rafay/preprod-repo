@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: network-test
+  project: kalyan-rds
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/network-test/network-rules.yml
+    options: {}
+    type: Yaml
+  version: v2

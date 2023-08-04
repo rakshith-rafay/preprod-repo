@@ -1,0 +1,24 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: cost-network-test
+  project: kalyan-rds
+spec:
+  base:
+    name: default
+    version: 1.26.0
+  costProfile:
+    name: cost-test1
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  networkPolicy:
+    policies:
+    - name: network-test
+      version: v2
+    profile:
+      name: network-test
+      version: v1
+  type: golden
+  version: v7
