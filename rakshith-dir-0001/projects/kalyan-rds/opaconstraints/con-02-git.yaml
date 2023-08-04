@@ -1,0 +1,7 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAConstraint
+metadata:
+  name: con-02-git
+  project: kalyan-rds
+spec:
+  templateName: volume-types
