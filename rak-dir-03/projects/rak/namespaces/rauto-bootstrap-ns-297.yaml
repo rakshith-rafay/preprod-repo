@@ -1,0 +1,8 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: rauto-bootstrap-ns-297
+  project: rak
+spec:
+  limitRange: {}
+  resourceQuotas: {}
