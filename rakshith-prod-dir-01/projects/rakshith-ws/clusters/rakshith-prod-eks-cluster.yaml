@@ -5,8 +5,7 @@ metadata:
   project: rakshith-ws
 spec:
   blueprintConfig:
-    name: service-mesh-bp-01
-    version: "126"
+    name: minimal
   cloudCredentials: AWS-CRED
   config:
     addons:
