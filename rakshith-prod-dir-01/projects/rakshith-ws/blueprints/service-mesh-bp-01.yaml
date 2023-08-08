@@ -6,7 +6,7 @@ metadata:
 spec:
   base:
     name: default
-    version: 1.27.0
+    version: 1.26.0
   defaultAddons:
     enableIngress: true
     enableMonitoring: true
@@ -19,4 +19,4 @@ spec:
       name: ingress-enabled
       version: v1
   type: custom
-  version: v2-with-np
+  version: "126"
