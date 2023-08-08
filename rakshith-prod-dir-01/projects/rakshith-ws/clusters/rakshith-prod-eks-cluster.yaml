@@ -6,7 +6,7 @@ metadata:
 spec:
   blueprintConfig:
     name: service-mesh-bp-01
-    version: v2-with-np
+    version: "126"
   cloudCredentials: AWS-CRED
   config:
     addons:
