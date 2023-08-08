@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: bookinfo-b
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/bookinfo-b/bookinfo-b.yaml
+    type: Yaml
+  namespace: bookinfo-b
+  placement:
+    selector: rafay.dev/clusterName=rakshith-prod-eks-cluster
+  version: bookinfo-b-v1-202308050751560000

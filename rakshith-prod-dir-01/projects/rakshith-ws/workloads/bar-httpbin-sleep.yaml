@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: bar-httpbin-sleep
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/bar-httpbin-sleep/bar-httpbin-sleep.yaml
+    options: {}
+    type: Yaml
+  namespace: bar
+  placement:
+    selector: rafay.dev/clusterName=rakshith-prod-eks-cluster
+  version: bar-httpbin-sleep-v9-202308050659170000

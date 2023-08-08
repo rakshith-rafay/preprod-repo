@@ -1,0 +1,13 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: NamespaceMeshRule
+metadata:
+  name: stage-ns-rule-1
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://namespace-wide-policies/test-ns-strict-mtls.yaml
+    options: {}
+    type: Yaml
+  version: v1

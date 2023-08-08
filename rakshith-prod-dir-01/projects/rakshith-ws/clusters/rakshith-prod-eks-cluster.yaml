@@ -1,0 +1,47 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: rakshith-prod-eks-cluster
+  project: rakshith-ws
+spec:
+  blueprintConfig:
+    name: service-mesh-bp-01
+    version: v2-with-np
+  cloudCredentials: AWS-CRED
+  config:
+    addons:
+    - name: aws-ebs-csi-driver
+      version: latest
+    managedNodeGroups:
+    - amiFamily: AmazonLinux2
+      desiredCapacity: 2
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+      instanceTypes:
+      - t3.xlarge
+      maxSize: 2
+      minSize: 0
+      name: ng-8b76d689
+      version: "1.26"
+      volumeSize: 80
+      volumeType: gp3
+    metadata:
+      name: rakshith-prod-eks-cluster
+      region: us-west-2
+      tags:
+        email: rakshith@rafay.co
+        env: qa
+      version: "1.26"
+    network:
+      cni:
+        name: aws-cni
+    vpc:
+      cidr: 192.168.0.0/16
+      clusterEndpoints:
+        privateAccess: false
+        publicAccess: true
+      nat:
+        gateway: Single
+  proxyConfig: {}
+  type: aws-eks

@@ -1,0 +1,13 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: MeshProfile
+metadata:
+  name: eks-ingress-profile-1-20-0
+  project: rakshith-ws
+spec:
+  installationParams:
+    certType: SelfSigned
+    enableIngress: true
+    resourceQuota:
+      cpuRequests: 500m
+      memoryRequests: 2048Mi
+  version: v1

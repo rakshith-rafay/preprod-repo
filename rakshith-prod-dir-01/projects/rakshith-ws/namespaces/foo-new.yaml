@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: foo-new
+  project: rakshith-ws
+spec:
+  limitRange: {}
+  namespaceMeshPolicyParams:
+    meshEnabled: true
+    policies:
+    - name: enable-strict-mtls
+      version: version-1667016774
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-eks-cluster-terraform-1
+  resourceQuotas: {}

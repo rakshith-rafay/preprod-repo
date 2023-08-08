@@ -1,0 +1,9 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Catalog
+metadata:
+  name: csi-driver
+  project: rakshith-ws
+spec:
+  autoSync: true
+  repository: csi-driver-repo
+  type: HelmRepository

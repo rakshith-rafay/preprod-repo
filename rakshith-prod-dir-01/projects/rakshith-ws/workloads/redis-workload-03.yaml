@@ -1,0 +1,22 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: redis-workload-03
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: redis-15.6.4.tgz
+      repository: os-repo
+      revision: main
+      valuesPaths:
+      - name: redis-value.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: ns-redis-01
+  placement:
+    selector: rafay.dev/clusterName=rakshith-prod-aks-01
+  version: v1

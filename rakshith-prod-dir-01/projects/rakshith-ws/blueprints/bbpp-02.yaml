@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: bbpp-02
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.27.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  type: golden
+  version: v1

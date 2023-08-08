@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: gajanan-repo
+  project: rakshith-ws
+spec:
+  agents:
+  - name: agent-1
+  credentials:
+    password: sealed://credentials.password
+    username: gajanan@rafay.co
+  endpoint: https://github.com/gajanan-rafay/test-repo
+  secret:
+    name: file://artifacts/gajanan-repo/sealed-secret.yaml
+  type: Git

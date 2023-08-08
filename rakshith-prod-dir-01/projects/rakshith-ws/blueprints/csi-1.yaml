@@ -1,0 +1,7 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: csi-1
+  project: rakshith-ws
+spec:
+  type: custom

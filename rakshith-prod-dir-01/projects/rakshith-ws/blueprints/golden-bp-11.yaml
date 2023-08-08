@@ -1,0 +1,26 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: golden-bp-11
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.18.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  networkPolicy:
+    profile:
+      name: default
+      version: latest
+  opaPolicy:
+    profile:
+      name: default
+      version: version-1664597317
+  serviceMesh:
+    profile:
+      name: istio-profile-minimal
+      version: version-1664597317
+  type: golden
+  version: v1

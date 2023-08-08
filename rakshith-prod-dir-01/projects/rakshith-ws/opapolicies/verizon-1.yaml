@@ -1,0 +1,14 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAPolicy
+metadata:
+  name: verizon-1
+  project: rakshith-ws
+spec:
+  constraintList:
+  - name: seccomp
+    version: version-1666029945
+  - name: se-linux
+    version: version-1666029945
+  - name: app-armor
+    version: version-1665671569
+  version: v1

@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: hemltest
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      chartName: nginx
+      chartVersion: 13.2.13
+      repository: default-bitnami
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: test-ns
+  placement:
+    selector: rafay.dev/clusterName=rakshith-prod-eks-cluster
+  version: hemltest-v1

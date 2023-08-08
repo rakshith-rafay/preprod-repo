@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: gcp-bp-opa
+  project: rakshith-ws
+spec:
+  base:
+    name: default-gke
+    version: 1.25.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+  opaPolicy:
+    profile:
+      name: default
+      version: latest
+  type: custom
+  version: v1

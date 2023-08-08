@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: ns-04
+  project: rakshith-ws
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: k3d-rakshith-ws-k3d-prod
+    - key: rafay.dev/clusterName
+      value: rakshith-import-aks-prod
+    - key: rafay.dev/clusterName
+      value: rakshith-import-gcp-prod
+  resourceQuotas: {}

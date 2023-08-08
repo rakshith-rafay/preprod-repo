@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: jan-mks-golden-bp-1
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.22.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  serviceMesh:
+    policies:
+    - name: enable-strict-mtls
+      version: version-1674884344
+    profile:
+      name: istio-profile-minimal
+      version: version-1674884344
+  type: golden
+  version: v1

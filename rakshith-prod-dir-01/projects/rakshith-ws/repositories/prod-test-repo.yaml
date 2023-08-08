@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: prod-test-repo
+  project: rakshith-ws
+spec:
+  agents:
+  - name: prod-eks-agent-1
+  credentials:
+    password: sealed://credentials.password
+    username: rakshith@rafay.co
+  endpoint: https://github.com/rakshith-rafay/prod-test-repo.git
+  secret:
+    name: file://artifacts/prod-test-repo/sealed-secret.yaml
+  type: Git

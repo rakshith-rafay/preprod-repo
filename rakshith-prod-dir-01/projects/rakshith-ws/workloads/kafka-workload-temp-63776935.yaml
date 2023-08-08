@@ -1,0 +1,23 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: kafka-workload-temp-63776935
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: kafka
+      chartVersion: 22.1.3
+      valuesPaths:
+      - name: file://artifacts/kafka-workload-temp-63776935/values (8).yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: aks-ns-2
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-import-aks-prod
+  version: kafka-workload-temp-63776935-v1-202305270617130000

@@ -1,0 +1,10 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: ClusterMeshPolicy
+metadata:
+  name: prod-cluster-policy-2
+  project: rakshith-ws
+spec:
+  rules:
+  - name: prod-cluster-rule-1
+    version: v2
+  version: v2

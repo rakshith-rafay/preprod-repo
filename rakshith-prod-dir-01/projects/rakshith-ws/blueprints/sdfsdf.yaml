@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: sdfsdf
+  project: rakshith-ws
+spec:
+  base:
+    name: golden-bp-1
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  type: custom
+  version: v1

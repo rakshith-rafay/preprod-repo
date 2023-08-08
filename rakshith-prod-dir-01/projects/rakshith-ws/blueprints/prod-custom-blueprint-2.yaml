@@ -1,0 +1,39 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: prod-custom-blueprint-2
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.19.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      helmExporter:
+        enabled: true
+      kubeStateMetrics:
+        enabled: true
+      metricsServer:
+        enabled: true
+      nodeExporter:
+        enabled: true
+      prometheusAdapter:
+        enabled: true
+      resources:
+        limits:
+          cpu: 100m
+          memory: 200Mi
+  drift:
+    action: Deny
+    enabled: true
+  serviceMesh:
+    policies:
+    - name: enable-strict-mtls
+      version: version-1667388681
+    profile:
+      name: istio-profile-minimal
+      version: version-1667388681
+  type: custom
+  version: v1.1

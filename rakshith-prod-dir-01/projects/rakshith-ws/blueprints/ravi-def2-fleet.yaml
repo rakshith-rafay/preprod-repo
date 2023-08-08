@@ -1,0 +1,23 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: ravi-def2-fleet
+  project: rakshith-ws
+spec:
+  base:
+    name: default-aks
+    version: 1.23.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  placement:
+    autoPublish: true
+    fleetValues:
+    - def2
+  type: custom
+  version: v4def

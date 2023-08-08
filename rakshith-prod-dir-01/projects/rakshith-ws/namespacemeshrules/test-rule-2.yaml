@@ -1,0 +1,11 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: NamespaceMeshRule
+metadata:
+  name: test-rule-2
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact: {}
+    options: {}
+    type: Yaml
+  version: v2

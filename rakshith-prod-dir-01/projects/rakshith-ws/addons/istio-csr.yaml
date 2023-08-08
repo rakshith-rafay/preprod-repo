@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  description: certificate sign request
+  name: istio-csr
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/istio-csr/cert-manager-istio-csr-v0.5.0.tgz
+      valuesPaths:
+      - name: file://artifacts/istio-csr/values-file-for-istio-csr.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: cert-manager
+  sharing: {}
+  version: v1-istio-csr

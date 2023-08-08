@@ -1,0 +1,30 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: SecretProviderClass
+metadata:
+  name: spc-01
+  project: rakshith-ws
+spec:
+  parameters:
+    objects: |
+      - jmesPath:
+        - objectAlias: test
+          path: test
+        - objectAlias: release
+          path: release
+        - objectAlias: gajanan
+          path: gajanan
+        objectAlias: alias-folder
+        objectName: arn:aws:secretsmanager:us-east-1:679196758854:secret:gajanan-prod-test-XqULle
+        objectType: secretsmanager
+  provider: AWS
+  secretObject:
+  - data:
+    - key: test
+      objectName: test
+    - key: release
+      objectName: release
+    - key: gajanan
+      objectName: gajanan
+    secretName: gajanan-prod12
+    type: Opaque
+  sharing: {}

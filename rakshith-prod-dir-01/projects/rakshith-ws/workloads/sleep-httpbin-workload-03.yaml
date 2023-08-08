@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: sleep-httpbin-workload-03
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://sleep-httpbin-workload-01.yaml
+    type: Yaml
+  namespace: ns-sleep-httpbin-02
+  placement:
+    selector: rafay.dev/clusterName=rakshith-prod-aks-01
+  version: v1
