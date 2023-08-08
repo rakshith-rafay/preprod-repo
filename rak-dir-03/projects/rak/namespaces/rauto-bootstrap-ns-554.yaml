@@ -1,8 +1,11 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Namespace
 metadata:
+  annotations:
+    rafay.dev/description: ""
   name: rauto-bootstrap-ns-554
   project: rak
 spec:
   limitRange: {}
+  namespaceMeshPolicyParams: {}
   resourceQuotas: {}
