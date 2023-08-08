@@ -1,0 +1,6 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: NamespaceMeshRule
+metadata:
+  name: ns-rule-01
+  project: rakshith-ws
+spec: {}
