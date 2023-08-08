@@ -4,6 +4,7 @@ metadata:
   name: ss
   project: rakshith-ws
 spec:
+  active: true
   stages:
   - config:
       destinationRepo: {}
