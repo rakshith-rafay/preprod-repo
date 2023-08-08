@@ -1,0 +1,13 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: NamespaceMeshRule
+metadata:
+  name: prod-ns-rule-01
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/prod-ns-rule-01/foo-strict-mtls.yaml
+    options: {}
+    type: Yaml
+  version: v1
