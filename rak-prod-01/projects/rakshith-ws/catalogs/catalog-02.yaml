@@ -1,0 +1,13 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Catalog
+metadata:
+  name: catalog-02
+  project: rakshith-ws
+spec:
+  autoSync: true
+  repository: default-bitnami
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'
+  type: HelmRepository
