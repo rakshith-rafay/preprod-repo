@@ -1,0 +1,30 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: pipeline-01
+  project: rakshith-ws
+spec:
+  active: true
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: rak-prod-01
+        repository: repo-01
+        revision: main
+      systemToGitSync: true
+    name: p01
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        provider: Github
+        repository: repo-01
+        revision: main
+    name: tt
+    type: Webhook
