@@ -5,6 +5,11 @@ metadata:
   project: rakshith-ws
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/wo-01/wo-01.yaml
     type: Yaml
   namespace: ns-01
+  placement:
+    selector: rafay.dev/clusterName=rakshith-aks-prod-01
+  version: wo-01-v1-202308260513590000
