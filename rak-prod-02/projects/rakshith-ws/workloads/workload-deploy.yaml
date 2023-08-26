@@ -1,0 +1,27 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: workload-deploy
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: cert-manager-v1.9.1.tgz
+      repository: repo-01
+      revision: main
+      valuesPaths:
+      - {}
+      valuesRef:
+        repository: repo-01
+        revision: main
+        valuesPaths:
+        - name: values-file-for-cert-manager.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: ns-03
+  placement:
+    selector: rafay.dev/clusterName=rakshith-aks-prod-01
+  version: workload-deploy-v1-202308260637190000
