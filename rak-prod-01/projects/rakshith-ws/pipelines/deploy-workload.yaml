@@ -3,4 +3,10 @@ kind: Pipeline
 metadata:
   name: deploy-workload
   project: rakshith-ws
-spec: {}
+spec:
+  active: true
+  stages:
+  - config:
+      workload: workload-deploy
+    name: deploy-workload
+    type: DeployWorkload
