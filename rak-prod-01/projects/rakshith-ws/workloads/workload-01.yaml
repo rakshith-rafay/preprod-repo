@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: workload-01
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/workload-01/cert-manager-v1.9.1.tgz
+      valuesPaths:
+      - name: file://artifacts/workload-01/values-file-for-cert-manager.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: ns-03
+  placement:
+    selector: rafay.dev/clusterName=rakshith-aks-prod-01
