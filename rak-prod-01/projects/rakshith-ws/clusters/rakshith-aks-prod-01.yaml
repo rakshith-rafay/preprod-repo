@@ -5,7 +5,7 @@ metadata:
   project: rakshith-ws
 spec:
   blueprintConfig:
-    name: minimal
+    name: default
   cloudCredentials: aks
   config:
     kind: aksClusterConfig
