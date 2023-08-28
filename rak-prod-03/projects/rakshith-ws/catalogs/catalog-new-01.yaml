@@ -6,8 +6,4 @@ metadata:
 spec:
   autoSync: true
   repository: default-bitnami
-  sharing:
-    enabled: true
-    projects:
-    - name: '*'
   type: HelmRepository
