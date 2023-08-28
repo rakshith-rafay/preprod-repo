@@ -1,0 +1,16 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: ""
+  name: ns-upload
+  project: rakshith-ws
+spec:
+  artifact:
+    path:
+      name: file://ns-upload/ns-upload.yaml
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  resourceQuotas: {}

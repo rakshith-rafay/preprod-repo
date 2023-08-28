@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: wo-02
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/wo-02/wo-02.yaml
+    type: Yaml
+  namespace: ns-01
+  placement:
+    selector: rafay.dev/clusterName=rakshith-aks-prod-01
+  version: wo-02-v1-202308260514320000

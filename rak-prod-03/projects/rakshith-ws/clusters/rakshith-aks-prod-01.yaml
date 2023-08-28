@@ -1,0 +1,65 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: rakshith-aks-prod-01
+  project: rakshith-ws
+spec:
+  blueprintConfig:
+    name: default-aks
+  cloudCredentials: aks
+  config:
+    kind: aksClusterConfig
+    metadata:
+      name: rakshith-aks-prod-01
+    spec:
+      managedCluster:
+        apiVersion: "2022-07-01"
+        identity:
+          type: SystemAssigned
+        location: centralindia
+        properties:
+          apiServerAccessProfile:
+            enablePrivateCluster: true
+          dnsPrefix: rakshith-aks-prod-01-dns
+          kubernetesVersion: 1.26.6
+          networkProfile:
+            loadBalancerSku: standard
+            networkPlugin: kubenet
+        sku:
+          name: Basic
+          tier: Free
+        type: Microsoft.ContainerService/managedClusters
+      nodePools:
+      - apiVersion: "2022-07-01"
+        location: centralindia
+        name: primary
+        properties:
+          count: 3
+          enableAutoScaling: true
+          maxCount: 3
+          maxPods: 110
+          minCount: 3
+          mode: System
+          orchestratorVersion: 1.26.6
+          osType: Linux
+          type: VirtualMachineScaleSets
+          vmSize: Standard_B2ms
+        type: Microsoft.ContainerService/managedClusters/agentPools
+      - apiVersion: "2022-07-01"
+        location: centralindia
+        name: sec
+        properties:
+          count: 3
+          enableAutoScaling: true
+          maxCount: 3
+          maxPods: 110
+          minCount: 3
+          mode: System
+          orchestratorVersion: 1.26.6
+          osType: Linux
+          type: VirtualMachineScaleSets
+          vmSize: Standard_DS2_v2
+        type: Microsoft.ContainerService/managedClusters/agentPools
+      resourceGroupName: rakshith-demo-aks
+  proxyConfig: {}
+  type: aks
