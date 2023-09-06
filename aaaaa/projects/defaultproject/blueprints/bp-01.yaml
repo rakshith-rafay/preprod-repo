@@ -12,5 +12,9 @@ spec:
     enableMonitoring: true
   driftWebhook:
     enabled: true
+  sharing:
+    enabled: true
+    projects:
+    - name: aa
   type: custom
   version: v1
