@@ -3,4 +3,8 @@ kind: NetworkPolicyProfile
 metadata:
   name: pro-01
   project: defaultproject
-spec: {}
+spec:
+  sharing:
+    enabled: true
+    projects:
+    - name: aa
