@@ -26,7 +26,3 @@ spec:
       objectName: newsecret
     secretName: rak-secret
     type: Opaque
-  sharing:
-    enabled: true
-    projects:
-    - name: aa
