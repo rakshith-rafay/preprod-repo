@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: ankit-sync
+  project: defaultproject
+spec:
+  agents:
+  - name: docker2
+  credentials:
+    password: sealed://credentials.password
+    username: ankit@rafay.co
+  endpoint: https://github.com/ankitrafay/ankit-gitsync-private.git
+  secret:
+    name: file://artifacts/ankit-sync/sealed-secret.yaml
+  type: Git

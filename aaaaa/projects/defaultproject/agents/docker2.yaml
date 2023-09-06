@@ -1,0 +1,9 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: docker2
+  project: defaultproject
+spec:
+  active: true
+  type: Docker
+  version: test2

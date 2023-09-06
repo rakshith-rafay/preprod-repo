@@ -1,0 +1,12 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: SecretProviderClass
+metadata:
+  name: test-share
+  project: defaultproject
+spec:
+  provider: AWS
+  sharing:
+    enabled: true
+    projects:
+    - name: p2
+    - name: p3

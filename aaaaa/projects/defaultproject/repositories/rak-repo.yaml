@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: rak-repo
+  project: defaultproject
+spec:
+  agents:
+  - name: docker2
+  credentials:
+    password: sealed://credentials.password
+    username: rakshith@rafay.co
+  endpoint: https://github.com/rakshith-rafay/preprod-repo.git
+  secret:
+    name: file://artifacts/rak-repo/sealed-secret.yaml
+  type: Git

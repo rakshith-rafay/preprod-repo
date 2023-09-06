@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: SecretProviderClass
+metadata:
+  name: test-git
+  project: defaultproject
+spec:
+  artifact:
+    artifact: {}
+    options: {}
+    type: Yaml
+  provider: AWS
+  sharing:
+    enabled: true
+    projects:
+    - name: p2

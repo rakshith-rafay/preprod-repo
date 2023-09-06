@@ -1,0 +1,39 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: sdcs
+  project: defaultproject
+spec:
+  active: true
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: aaaaa
+        repository: rak-repo
+        revision: main
+      systemToGitSync: true
+    name: test
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: 1aug29ankittb
+        provider: Github
+        repository: ankit-sync
+        revision: master
+    name: test
+    type: Webhook
+  - config:
+      repo:
+        provider: Github
+        repository: rak-repo
+        revision: main
+    name: test-02
+    type: Webhook

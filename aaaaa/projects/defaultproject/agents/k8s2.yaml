@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: k8s2
+  project: defaultproject
+spec:
+  active: true
+  cluster:
+    name: mini-tb
+  type: Cluster
+  version: test2
