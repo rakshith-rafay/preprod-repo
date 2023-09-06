@@ -1,0 +1,8 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: SecretProviderClass
+metadata:
+  name: rak-spc-01
+  project: defaultproject
+spec:
+  provider: AWS
+  sharing: {}
