@@ -4,5 +4,26 @@ metadata:
   name: rak-spc-01
   project: defaultproject
 spec:
+  parameters:
+    objects: |
+      - jmesPath:
+        - objectAlias: life
+          path: life
+        - objectAlias: a
+          path: a
+        - objectAlias: newsecret
+          path: newsecret
+        objectName: arn:aws:secretsmanager:us-west-2:679196758854:secret:stage-gajanan-secrets-LSO8Vt
+        objectType: secretsmanager
   provider: AWS
+  secretObject:
+  - data:
+    - key: life
+      objectName: life
+    - key: a
+      objectName: a
+    - key: newsecret
+      objectName: newsecret
+    secretName: rak-secret
+    type: Opaque
   sharing: {}
