@@ -1,7 +1,7 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Addon
 metadata:
-  name: addon-01
+  name: addon-03
   project: rakshith-ws
 spec:
   artifact:
@@ -9,6 +9,6 @@ spec:
       paths:
       - name: file://artifacts/addon-01/sleep.yaml
     type: Yaml
-  namespace: ns-01
+  namespace: ns-03
   sharing: {}
   version: v1
