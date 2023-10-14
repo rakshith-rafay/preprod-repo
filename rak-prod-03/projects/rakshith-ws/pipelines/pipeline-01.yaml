@@ -14,7 +14,7 @@ spec:
       sourceAsDestination: true
       sourceRepo:
         path:
-          name: rak-prod-03
+          name: rakshith-production-01
         repository: repo-01
         revision: main
       systemToGitSync: true
