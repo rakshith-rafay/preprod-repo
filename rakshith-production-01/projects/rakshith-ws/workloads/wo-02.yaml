@@ -11,5 +11,5 @@ spec:
     type: Yaml
   namespace: ns-02
   placement:
-    selector: rafay.dev/clusterName=rakshith-aks-prod-02
-  version: wo-02-v1-202309070736110000
+    selector: rafay.dev/clusterName=rakshith-prod-aks-cluster
+  version: wo-02-v2-202310140717260000
