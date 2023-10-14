@@ -20,3 +20,11 @@ spec:
       systemToGitSync: true
     name: p01
     type: SystemSync
+  triggers:
+  - config:
+      repo:
+        provider: Github
+        repository: repo-01
+        revision: main
+    name: ttt
+    type: Webhook
