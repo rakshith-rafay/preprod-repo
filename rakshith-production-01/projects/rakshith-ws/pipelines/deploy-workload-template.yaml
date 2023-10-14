@@ -1,0 +1,17 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: deploy-workload-template
+  project: rakshith-ws
+spec:
+  active: true
+  stages:
+  - config:
+      namespace: ns-03
+      placement:
+        labels:
+        - key: rafay.dev/clusterName
+          value: rakshith-aks-prod-01
+      workloadTemplate: template-01
+    name: template-01
+    type: DeployWorkloadTemplate

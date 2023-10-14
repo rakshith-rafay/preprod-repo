@@ -1,0 +1,14 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: SecretStore
+metadata:
+  name: test
+  project: rakshith-ws
+spec:
+  config:
+    vault:
+      clusters:
+      - authPath: auth
+        clusterName: rakshith-prod-aks-cluster
+        vaultNamespace: ns-01
+      host: https://www.example.com:port
+  provider: Vault
