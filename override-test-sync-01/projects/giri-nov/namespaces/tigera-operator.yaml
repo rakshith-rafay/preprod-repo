@@ -1,0 +1,27 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"addonmanager.kubernetes.io/mode":"Reconcile","control-plane":"true","kubernetes.azure.com/managedby":"aks","name":"tigera-operator"},"name":"tigera-operator"}}
+  labels:
+    addonmanager.kubernetes.io/mode: Reconcile
+    control-plane: "true"
+    kubernetes.azure.com/managedby: aks
+    kubernetes.io/metadata.name: tigera-operator
+    name: tigera-operator
+  name: tigera-operator
+  project: giri-nov
+spec:
+  drift:
+    action: Deny
+    enabled: true
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-az16
+    - key: rafay.dev/clusterName
+      value: giri-az14
+    - key: rafay.dev/clusterName
+      value: giri-az1-qc-dec7

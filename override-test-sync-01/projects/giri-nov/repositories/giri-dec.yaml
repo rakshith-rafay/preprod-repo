@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: giri-dec
+  project: giri-nov
+spec:
+  agents:
+  - name: giri-agent1
+  credentials:
+    password: sealed://credentials.password
+    username: giri-rafay
+  endpoint: https://github.com/giri-rafay/giri-dec.git
+  secret:
+    name: file://artifacts/giri-dec/sealed-secret.yaml
+  type: Git

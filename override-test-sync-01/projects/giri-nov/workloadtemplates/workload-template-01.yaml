@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: WorkloadTemplate
+metadata:
+  name: workload-template-01
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/workload-template-01/cert-manager-v1.9.1.tgz
+      valuesPaths:
+      - name: file://artifacts/workload-template-01/values-file-for-cert-manager.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm

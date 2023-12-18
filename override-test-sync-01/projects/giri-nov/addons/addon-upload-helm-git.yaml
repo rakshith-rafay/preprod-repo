@@ -1,0 +1,24 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  description: git-helm-upload
+  name: addon-upload-helm-git
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/addon-upload-helm/redis-15.6.4.tgz
+      valuesPaths:
+      - name: file://artifacts/addon-upload-helm/values.yaml
+    options:
+      atomic: true
+      cleanUpOnFail: true
+      disableOpenAPIValidation: true
+      force: true
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: cert-manager
+  sharing: {}
+  version: v12

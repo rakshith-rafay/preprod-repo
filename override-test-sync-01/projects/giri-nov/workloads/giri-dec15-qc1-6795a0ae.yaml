@@ -1,0 +1,22 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: giri-dec15-qc1-6795a0ae
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/giri-dec15-qc1-6795a0ae/cert-manager-v1.9.1.tgz
+      valuesPaths:
+      - name: file://artifacts/giri-dec15-qc1-6795a0ae/values-file-for-cert-manager.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: workload-temp-ns
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-dec15-qc1
+  version: giri-dec15-qc1-6795a0ae-v7-202312150827120000

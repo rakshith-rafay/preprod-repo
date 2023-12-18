@@ -1,0 +1,25 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: dsdsdsd
+    rep-drift-action: deny
+  description: dsdsdsd
+  labels:
+    kubernetes.io/metadata.name: minio-nsfdfd
+    name: minio-nsfdfd
+    rep-drift-reconcillation: enabled
+    rep-organization: 7w2lnkp
+    rep-partner: rx28oml
+    rep-project: kr993wk
+  name: minio-nsfdfd
+  project: giri-nov
+spec:
+  drift:
+    action: Deny
+    enabled: true
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-az14

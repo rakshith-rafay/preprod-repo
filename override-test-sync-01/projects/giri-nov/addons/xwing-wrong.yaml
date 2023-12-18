@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: xwing-wrong
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/xwing-wrong/http-sw-app.yaml
+    type: Yaml
+  namespace: xwing-wrong
+  sharing: {}
+  version: v1

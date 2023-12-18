@@ -1,0 +1,9 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NetworkPolicyProfile
+metadata:
+  name: giri-ip1
+  project: giri-nov
+spec:
+  installationParams:
+    policyEnforcementMode: default
+  version: v1
