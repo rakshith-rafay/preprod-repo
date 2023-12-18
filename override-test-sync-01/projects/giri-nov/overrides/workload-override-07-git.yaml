@@ -22,4 +22,4 @@ spec:
     type: Workload
   type: Helm
   valuesPath:
-    name: file://workload-override-06/workload-override-06.yaml
+    name: file://workload-override-07-git/workload-override-07-git.yaml
