@@ -15,5 +15,4 @@ spec:
     type: Helm
   namespace: ns-01
   placement:
-    selector: rafay.dev/clusterName=giri-dec18-demo2
-  version: worklaod-override-01-v1-202312181042480000
+    selector: rafay.dev/clusterName=giri-dec18-demo1
