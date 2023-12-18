@@ -11,10 +11,15 @@ spec:
     labels:
     - key: rafay.dev/clusterName
       value: giri-dec18-demo2
+  repo:
+    path:
+      name: override-test-sync-01/projects/helm.yaml
+    repository: test-repo-01
+    revision: main
   resource:
     selector:
       name: worklaod-override-01
     type: Workload
   type: Helm
   valuesPath:
-    name: file://workload-override-05/workload-override-05.yaml
+    name: file://workload-override-06/workload-override-06.yaml

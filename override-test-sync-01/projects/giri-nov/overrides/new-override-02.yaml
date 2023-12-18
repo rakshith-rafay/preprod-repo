@@ -17,4 +17,4 @@ spec:
     type: Workload
   type: Helm
   valuesPath:
-    name: file://new-override-01/new-override-01.yaml
+    name: file://new-override-02/new-override-02.yaml
