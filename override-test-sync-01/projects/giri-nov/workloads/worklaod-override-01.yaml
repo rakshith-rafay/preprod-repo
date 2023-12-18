@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: worklaod-override-01
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      catalog: default-aqua
+      chartName: scanner
+      chartVersion: 2022.4.6
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: ns-01
+  placement:
+    selector: rafay.dev/clusterName=giri-dec18-demo2
+  version: worklaod-override-01-v1-202312181042480000
