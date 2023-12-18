@@ -5,4 +5,6 @@ metadata:
     rafay.dev/description: ""
   name: ns-03
   project: giri-nov
-spec: {}
+spec:
+  namespaceMeshPolicyParams: {}
+  resourceQuotas: {}
