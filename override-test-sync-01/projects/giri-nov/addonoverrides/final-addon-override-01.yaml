@@ -7,6 +7,14 @@ metadata:
   name: final-addon-override-01
   project: giri-nov
 spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-dec18-demo2
   resource:
+    selector:
+      name: test-addon-01
     type: Addon
   type: Helm
+  valuesPath:
+    name: file://final-addon-override-01/final-addon-override-01.yaml
