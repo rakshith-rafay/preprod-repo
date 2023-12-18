@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: test-addon-01
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      catalog: default-aqua
+      chartName: scanner
+      chartVersion: 2022.4.6
+    type: Helm
+  namespace: ns-01
+  sharing: {}
+  version: ver1
