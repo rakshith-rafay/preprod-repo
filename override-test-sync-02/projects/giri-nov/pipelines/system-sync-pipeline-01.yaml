@@ -27,7 +27,7 @@ spec:
   - config:
       repo:
         paths:
-        - name: override-test-sync-01
+        - name: override-test-sync-02
         provider: Github
         repository: test-repo-01
         revision: main
