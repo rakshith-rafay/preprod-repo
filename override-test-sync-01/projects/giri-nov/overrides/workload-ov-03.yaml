@@ -1,0 +1,12 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Override
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: valuesFile
+  name: workload-ov-03
+  project: giri-nov
+spec:
+  resource:
+    type: Workload
+  type: Helm

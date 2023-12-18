@@ -4,7 +4,7 @@ metadata:
   labels:
     rafay.dev/overrideScope: clusterLabels
     rafay.dev/overrideType: valuesFile
-  name: workload-override-05
+  name: workload-ov-02
   project: giri-nov
 spec:
   placement:
@@ -13,8 +13,8 @@ spec:
       value: giri-dec18-demo2
   resource:
     selector:
-      name: worklaod-override-01
+      name: workload-02
     type: Workload
   type: Helm
   valuesPath:
-    name: file://workload-override-05/workload-override-05.yaml
+    name: file://workload-ov-02/workload-ov-02.yaml
