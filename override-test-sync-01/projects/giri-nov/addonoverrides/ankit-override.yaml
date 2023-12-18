@@ -7,6 +7,12 @@ metadata:
   name: ankit-override
   project: giri-nov
 spec:
+  placement:
+    selector: aaa
   resource:
+    selector:
+      name: testing-custom-git
     type: Addon
   type: Helm
+  valuesPath:
+    name: file://ankit-override/ankit-override.yaml
