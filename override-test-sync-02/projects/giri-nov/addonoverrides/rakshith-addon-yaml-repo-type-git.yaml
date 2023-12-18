@@ -22,4 +22,4 @@ spec:
     type: Addon
   type: Yaml
   valuesPath:
-    name: file://rakshith-addon-yaml-repo-type/rakshith-addon-yaml-repo-type.yaml
+    name: file://rakshith-addon-yaml-repo-type-git/rakshith-addon-yaml-repo-type-git.yaml
