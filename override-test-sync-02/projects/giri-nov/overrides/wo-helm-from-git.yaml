@@ -14,7 +14,7 @@ spec:
   resource:
     selector:
       name: workload-02
-    type: Workload
+    type: Addon
   type: Helm
   valuesPath:
     name: file://wo-helm/wo-helm.yaml
