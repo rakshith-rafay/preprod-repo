@@ -15,6 +15,6 @@ spec:
     selector:
       name: workload-02
     type: Workload
-  type: Helm
+  type: Yaml
   valuesPath:
     name: file://wo-helm/wo-helm.yaml
