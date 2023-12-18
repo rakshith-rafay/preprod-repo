@@ -4,6 +4,7 @@ metadata:
   name: system-sync-pipeline-01
   project: giri-nov
 spec:
+  active: true
   stages:
   - config:
       destinationRepo: {}
