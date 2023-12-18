@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: valuesFile
+  name: rakshith-addon-override-01
+  project: giri-nov
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-dec18-demo2
+  resource:
+    selector:
+      name: test-addon-01
+    type: Addon
+  type: Helm
+  valuesPath:
+    name: file://rakshith-addon-override-01/rakshith-addon-override-01.yaml

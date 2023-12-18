@@ -1,0 +1,6 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAProfile
+metadata:
+  name: test
+  project: giri-nov
+spec: {}
