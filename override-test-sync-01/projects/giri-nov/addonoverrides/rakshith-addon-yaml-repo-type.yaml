@@ -7,6 +7,19 @@ metadata:
   name: rakshith-addon-yaml-repo-type
   project: giri-nov
 spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-dec18-demo2
+  repo:
+    path:
+      name: override-test-sync-01/projects/ngnix.yaml
+    repository: test-repo-01
+    revision: main
   resource:
+    selector:
+      name: testing-custom
     type: Addon
   type: Yaml
+  valuesPath:
+    name: file://rakshith-addon-yaml-repo-type/rakshith-addon-yaml-repo-type.yaml
