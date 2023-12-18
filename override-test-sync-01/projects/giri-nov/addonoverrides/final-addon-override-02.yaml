@@ -17,4 +17,4 @@ spec:
     type: Addon
   type: Helm
   valuesPath:
-    name: file://final-addon-override-01/final-addon-override-01.yaml
+    name: file://final-addon-override-02/final-addon-override-02.yaml
