@@ -10,6 +10,7 @@ spec:
       destinationRepo: {}
       excludedResources:
       - name: Namespace
+      - name: Workload
       gitToSystemSync: true
       includedResources:
       - name: '*'

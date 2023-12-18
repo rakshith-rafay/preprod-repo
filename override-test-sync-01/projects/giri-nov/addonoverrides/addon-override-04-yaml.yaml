@@ -17,4 +17,4 @@ spec:
     type: Addon
   type: Yaml
   valuesPath:
-    name: file://addon-override-03-yaml/addon-override-03-yaml.yaml
+    name: file://addon-override-04-yaml/addon-override-04-yaml.yaml
