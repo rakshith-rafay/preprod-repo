@@ -8,6 +8,8 @@ spec:
   stages:
   - config:
       destinationRepo: {}
+      excludedResources:
+      - name: Namespace
       gitToSystemSync: true
       includedResources:
       - name: '*'
