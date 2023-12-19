@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: eks-ns-repo-type-httpbin-sleep
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/eks-ns-repo-type-httpbin-sleep/eks-ns-repo-type-httpbin-sleep.yaml
+    type: Yaml
+  namespace: eks-ns-type-repo
+  placement:
+    selector: rafay.dev/clusterName=rakshith-eks-cluster-stg
+  version: eks-ns-repo-type-httpbin-sleep-v2

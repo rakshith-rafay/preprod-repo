@@ -1,0 +1,32 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: os-pip-1
+  project: rakshith-ws
+spec:
+  active: true
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: stage-dir-03
+        repository: repo-3
+        revision: main
+      systemToGitSync: true
+    name: os-1
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: stage-dir-03
+        provider: Github
+        repository: repo-3
+        revision: main
+    name: tttt
+    type: Webhook

@@ -1,0 +1,28 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: stage-aks-bp-1
+  project: rakshith-ws
+spec:
+  base:
+    name: default-aks
+    version: 1.19.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  serviceMesh:
+    policies:
+    - name: enable-strict-mtls
+      version: version-1666677894
+    profile:
+      name: installation-profile-1
+      version: v1
+  type: custom
+  version: v2

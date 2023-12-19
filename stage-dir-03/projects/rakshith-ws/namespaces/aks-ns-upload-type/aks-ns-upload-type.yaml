@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: aks-ns-upload-type
+  labels:
+    name: aks-ns-upload-type

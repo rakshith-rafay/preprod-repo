@@ -1,0 +1,25 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: openshift-bp-1
+  project: rakshith-ws
+spec:
+  base:
+    name: default-openshift
+    version: 1.25.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  opaPolicy:
+    profile:
+      name: default
+      version: latest
+  type: custom
+  version: v1

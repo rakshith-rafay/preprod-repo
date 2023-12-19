@@ -1,0 +1,12 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: MeshProfile
+metadata:
+  name: tf-demo-profile-1
+  project: rakshith-ws
+spec:
+  installationParams:
+    certType: SelfSigned
+    resourceQuota:
+      cpuRequests: 500m
+      memoryRequests: 2048Mi
+  version: v0

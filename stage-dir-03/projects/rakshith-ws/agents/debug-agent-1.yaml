@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: debug-agent-1
+  project: rakshith-ws
+spec:
+  active: true
+  cluster:
+    name: giri-patch-mks
+  type: Cluster
+  version: r1.22.0

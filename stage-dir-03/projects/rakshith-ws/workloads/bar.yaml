@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: bar
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/bar/bar.yaml
+    type: Yaml
+  namespace: bar
+  placement:
+    selector: rafay.dev/clusterName=rakshith-stage-eks-cluster
+  version: bar-v2-202308070638150000

@@ -1,0 +1,14 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test-1
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test-1/test-1.yaml
+    type: Yaml
+  namespace: bookinfo
+  placement:
+    selector: rafay.dev/clusterName=rakshith-stage-azue

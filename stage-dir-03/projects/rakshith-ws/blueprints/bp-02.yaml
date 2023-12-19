@@ -1,0 +1,9 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: bp-02
+  project: rakshith-ws
+spec:
+  driftWebhook:
+    enabled: true
+  type: golden

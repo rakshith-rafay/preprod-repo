@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: csi-ns
+  project: rakshith-ws
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-azure-stage-1
+    - key: rafay.dev/clusterName
+      value: rakshith-gcp-gke-stage-1
+  resourceQuotas: {}

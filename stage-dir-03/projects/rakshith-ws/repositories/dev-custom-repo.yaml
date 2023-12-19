@@ -1,0 +1,10 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: dev-custom-repo
+  project: rakshith-ws
+spec:
+  agents:
+  - {}
+  endpoint: https://repo.dev.rafay-edge.net/repository/default-helm/v1
+  type: Helm

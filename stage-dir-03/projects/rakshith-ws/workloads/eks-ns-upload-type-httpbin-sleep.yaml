@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: eks-ns-upload-type-httpbin-sleep
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/eks-ns-upload-type-httpbin-sleep/eks-ns-upload-type-httpbin-sleep.yaml
+    type: Yaml
+  namespace: eks-ns-upload-type
+  placement:
+    selector: rafay.dev/clusterName=rakshith-eks-cluster-stg
+  version: eks-ns-upload-type-httpbin-sleep-v2

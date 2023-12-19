@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: repo-3
+  project: rakshith-ws
+spec:
+  agents:
+  - name: agent-aks-02
+  credentials:
+    password: sealed://credentials.password
+    username: rakshith@rafay.co
+  endpoint: https://github.com/rakshith-rafay/preprod-repo.git
+  secret:
+    name: file://artifacts/repo-3/sealed-secret.yaml
+  type: Git

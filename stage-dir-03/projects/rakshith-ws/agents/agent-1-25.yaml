@@ -1,0 +1,14 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: agent-1-25
+  project: rakshith-ws
+spec:
+  active: true
+  sharing:
+    enabled: true
+    projects:
+    - id: 24wegvm
+      name: aa-1
+  type: Docker
+  version: r1.24.1

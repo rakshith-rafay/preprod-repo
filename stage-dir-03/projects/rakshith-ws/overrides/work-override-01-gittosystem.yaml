@@ -1,0 +1,20 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Override
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: work-override-01-gittosystem
+  project: rakshith-ws
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-aks-stage-01
+  resource:
+    selector:
+      name: bar
+    type: Workload
+  type: Yaml
+  valuesPath:
+    name: file://work-override-01-gittosystem/work-override-01-gittosystem.yaml

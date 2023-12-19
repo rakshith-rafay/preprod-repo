@@ -1,0 +1,23 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  description: bp-12
+  name: bp-12
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.19.0
+  defaultAddons:
+    csiSecretStoreConfig:
+      providers: {}
+    enableIngress: true
+    enableMonitoring: true
+  driftWebhook:
+    enabled: true
+  serviceMesh:
+    profile:
+      name: tfdemomeshprofile1
+      version: v0
+  type: custom
+  version: v1.1

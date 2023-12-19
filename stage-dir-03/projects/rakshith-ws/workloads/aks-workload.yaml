@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: aks-workload
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/aks-workload/aks-workload.yaml
+    type: Yaml
+  namespace: aks-ns-upload-type
+  placement:
+    selector: rafay.dev/clusterName=rakshith-aks-cluster-stg
+  version: aks-workload-v1

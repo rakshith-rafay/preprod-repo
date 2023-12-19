@@ -1,0 +1,13 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: ClusterMeshRule
+metadata:
+  name: cluster-mesh-rule-1
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://cluster-permissive-strict-mtls.yaml
+    options: {}
+    type: Yaml
+  version: v1.1

@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: os-agent-2
+  project: rakshith-ws
+spec:
+  active: true
+  cluster:
+    name: rakshith-imp-os-cluster
+  type: Cluster
+  version: r1.24.1

@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: foo
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/foo/foo.yaml
+    type: Yaml
+  namespace: foo
+  placement:
+    selector: rafay.dev/clusterName=rakshith-stage-eks-cluster
+  version: foo-v3-202308070637290000

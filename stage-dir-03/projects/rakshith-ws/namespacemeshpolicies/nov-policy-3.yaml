@@ -1,0 +1,10 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: NamespaceMeshPolicy
+metadata:
+  name: nov-policy-3
+  project: rakshith-ws
+spec:
+  rules:
+  - name: nov-rule-3
+    version: v1
+  version: v1

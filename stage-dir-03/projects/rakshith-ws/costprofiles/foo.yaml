@@ -1,0 +1,7 @@
+apiVersion: cost.k8smgmt.io/v3
+kind: CostProfile
+metadata:
+  name: foo
+  project: rakshith-ws
+spec:
+  providerType: aws

@@ -1,0 +1,24 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: test-repo-1
+  project: rakshith-ws
+spec:
+  artifact:
+    path:
+      name: dir-13/projects/rakshith-ws/namespaces/tf-ns-upload-1/test-repo-1.yaml
+    repository: eks-repo
+    revision: main
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams:
+    meshEnabled: true
+    policies:
+    - name: rctl-namespace-policy-1
+      version: v1
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-eks-cluster-stg
+  resourceQuotas: {}

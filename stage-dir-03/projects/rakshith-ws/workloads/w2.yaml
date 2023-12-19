@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: w2
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://sleep.yaml
+    options: {}
+    type: Yaml
+  namespace: ns-gcp
+  placement:
+    selector: rafay.dev/clusterName=rakshith-gcp-gke-stage-1
+  version: v1

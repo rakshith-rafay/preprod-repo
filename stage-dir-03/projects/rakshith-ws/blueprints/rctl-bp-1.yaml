@@ -1,0 +1,23 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: rctl-bp-1
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.20.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  driftWebhook:
+    enabled: true
+  serviceMesh:
+    policies:
+    - name: enable-strict-mtls
+      version: version-1668498277
+    profile:
+      name: istio-profile-minimal
+      version: version-1668498277
+  type: custom
+  version: v1

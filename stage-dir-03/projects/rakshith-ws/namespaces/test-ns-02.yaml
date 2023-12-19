@@ -1,0 +1,11 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: ""
+  name: test-ns-02
+  project: rakshith-ws
+spec:
+  artifact:
+    path:
+      name: file://test-ns-02/test-ns-02.yaml

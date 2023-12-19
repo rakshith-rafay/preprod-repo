@@ -1,0 +1,15 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: NamespaceMeshRule
+metadata:
+  name: nov-rule-3
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: dir-13/projects/rakshith-ws/namespacemeshrules/foo-strict-mtls.yaml
+      repository: eks-repo
+      revision: main
+    options: {}
+    type: Yaml
+  version: v1

@@ -1,0 +1,34 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: aws-bp-1
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.20.0
+  costProfile:
+    name: default-cost-profile-aws
+    version: version-1666369365
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  driftWebhook:
+    enabled: true
+  networkPolicy:
+    profile:
+      name: default
+      version: latest
+  opaPolicy:
+    profile:
+      name: default
+      version: latest
+  serviceMesh:
+    policies:
+    - name: enable-strict-mtls
+      version: version-1668498277
+    profile:
+      name: eks-ingress-enabled-profile
+      version: v1
+  type: custom
+  version: v2

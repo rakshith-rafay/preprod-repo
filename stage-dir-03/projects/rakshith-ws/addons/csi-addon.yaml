@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: csi-addon
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      catalog: default-helm
+      chartName: secrets-store-csi-driver
+      chartVersion: 1.3.0
+      valuesPaths:
+      - name: file://artifacts/csi-addon/value-stage-csi.yaml
+    type: Helm
+  namespace: csi-ns
+  sharing: {}
+  version: v1

@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: secert-id
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/secert-id/secert-id.yaml
+    type: Yaml
+  namespace: istio-system
+  sharing: {}
+  version: v1-secert-id

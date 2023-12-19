@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: agen-1
+  project: rakshith-ws
+spec:
+  active: true
+  cluster:
+    name: maypreview-k3d-11
+  type: Cluster
+  version: r1.22.0

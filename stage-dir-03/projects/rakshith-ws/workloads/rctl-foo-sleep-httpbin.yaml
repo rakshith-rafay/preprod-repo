@@ -1,0 +1,14 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: rctl-foo-sleep-httpbin
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact: {}
+    options: {}
+    type: Yaml
+  namespace: rctl-foo
+  placement:
+    selector: rafay.dev/clusterName=rakshith-rctl-eks-cluster
+  version: v1

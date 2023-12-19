@@ -1,0 +1,10 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: NamespaceMeshPolicy
+metadata:
+  name: ns-policy-50percent
+  project: rakshith-ws
+spec:
+  rules:
+  - name: ns-rule-all-50
+    version: v1-80-percent-and-v3-20-percent-traffic
+  version: v2

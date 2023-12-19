@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: gcp-agent-stage-2
+  project: rakshith-ws
+spec:
+  active: true
+  cluster:
+    name: rakshith-imp-gcp-cluster
+  type: Cluster
+  version: r1.24.1

@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: test-ns
+  project: rakshith-ws
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-imp-aks-cluster
+    - key: rafay.dev/clusterName
+      value: rakshith-imp-gcp-cluster
+    - key: rafay.dev/clusterName
+      value: rakshith-imp-os-cluster
+  resourceQuotas: {}

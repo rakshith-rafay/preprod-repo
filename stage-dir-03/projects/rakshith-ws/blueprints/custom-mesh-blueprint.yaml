@@ -1,0 +1,43 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: custom-mesh-blueprint
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.19.0
+  costProfile:
+    name: default-cost-profile-aws
+    version: version-1670288367
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  drift:
+    action: Deny
+    enabled: true
+  driftWebhook:
+    enabled: true
+  networkPolicy:
+    policies:
+    - name: cluster-pol3
+      version: pol3-v1
+    profile:
+      name: default
+      version: latest
+  opaPolicy:
+    opaPolicy:
+    - name: veer-test
+      version: v1
+    profile:
+      name: default
+      version: latest
+  serviceMesh:
+    policies:
+    - name: cluster-mesh-policy-1
+      version: v1.1
+    profile:
+      name: tfdemomeshprofile1
+      version: v0
+  type: custom
+  version: v1

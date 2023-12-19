@@ -1,0 +1,39 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: aks-bp-01
+  project: rakshith-ws
+spec:
+  base:
+    name: default-aks
+    version: 1.25.0
+  costProfile:
+    name: default-cost-profile-azure
+    version: version-1670237774
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  networkPolicy:
+    profile:
+      name: default
+      version: latest
+  opaPolicy:
+    profile:
+      name: default
+      version: latest
+  serviceMesh:
+    policies:
+    - name: enable-strict-mtls
+      version: version-1684303423
+    profile:
+      name: istio-profile-minimal
+      version: version-1684303423
+  type: custom
+  version: v1-all-service

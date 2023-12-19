@@ -1,0 +1,39 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  description: vault testing
+  name: bp-aks
+  project: rakshith-ws
+spec:
+  base:
+    name: default-aks
+    version: 1.19.0
+  customAddons:
+  - name: cert-manager
+    version: v1-cert-manager
+  - dependsOn:
+    - cert-manager
+    name: cert-manager-istio-csr
+    version: v1-cert-manager-istio-csr
+  - dependsOn:
+    - cert-manager
+    name: issuer
+    version: istio-issuer
+  - name: secert-id
+    version: v1-secert-id
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  serviceMesh:
+    profile:
+      name: tf-demo-profile-2
+      version: v1
+  type: custom
+  version: v5-vault-testing

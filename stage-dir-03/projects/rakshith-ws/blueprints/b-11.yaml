@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: b-11
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.21.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  driftWebhook:
+    enabled: true
+  serviceMesh:
+    profile:
+      name: istio-profile-minimal
+      version: version-1670479558
+  type: custom
+  version: v1

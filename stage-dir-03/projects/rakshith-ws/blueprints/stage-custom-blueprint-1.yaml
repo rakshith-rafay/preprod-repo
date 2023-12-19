@@ -1,0 +1,41 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: stage-custom-blueprint-1
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.20.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      helmExporter:
+        enabled: true
+      kubeStateMetrics:
+        enabled: true
+      metricsServer:
+        enabled: true
+      nodeExporter:
+        enabled: true
+      prometheusAdapter:
+        enabled: true
+      resources:
+        limits:
+          cpu: 100m
+          memory: 200Mi
+  drift:
+    action: Deny
+    enabled: true
+  driftWebhook:
+    enabled: true
+  serviceMesh:
+    policies:
+    - name: cluster-mesh-policy-1
+      version: v1.1
+    profile:
+      name: selfsigned-mesh-profile
+      version: v1.1
+  type: custom
+  version: v1.2

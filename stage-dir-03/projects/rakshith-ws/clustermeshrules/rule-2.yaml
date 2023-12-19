@@ -1,0 +1,6 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: ClusterMeshRule
+metadata:
+  name: rule-2
+  project: rakshith-ws
+spec: {}

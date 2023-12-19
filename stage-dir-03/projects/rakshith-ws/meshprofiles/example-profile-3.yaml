@@ -1,0 +1,18 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: MeshProfile
+metadata:
+  name: example-profile-3
+  project: rakshith-ws
+spec:
+  installationParams:
+    certType: SelfSigned
+    enableIngress: true
+    resourceQuota:
+      cpuRequests: 500m
+      memoryRequests: 2048Mi
+  sharing:
+    enabled: true
+    projects:
+    - id: kv6v9vm
+      name: onlyshare
+  version: example-version

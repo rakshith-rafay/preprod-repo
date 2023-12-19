@@ -1,0 +1,13 @@
+apiVersion: servicemesh.k8smgmt.io/v3
+kind: NamespaceMeshRule
+metadata:
+  name: ns-rule-all-50
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/ns-rule-all-50/rule-vs-reviews-50-v3.yaml-version-version-1.yaml
+    options: {}
+    type: Yaml
+  version: v1-80-percent-and-v3-20-percent-traffic

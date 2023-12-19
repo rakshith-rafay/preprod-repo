@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: latest-stage-bp-1
+  project: rakshith-ws
+spec:
+  base:
+    name: default
+    version: 1.20.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  driftWebhook:
+    enabled: true
+  networkPolicy:
+    profile:
+      name: default
+      version: latest
+  type: custom
+  version: v3-np

@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: issuer
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/issuer/issuer.yaml
+    type: Yaml
+  namespace: istio-system
+  sharing: {}
+  version: istio-issuer

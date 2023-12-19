@@ -1,0 +1,22 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: eks-ns-upload-type
+  project: rakshith-ws
+spec:
+  artifact:
+    path:
+      name: file://eks-ns-upload-type/eks-ns-upload-type.yaml
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams:
+    meshEnabled: true
+    policies:
+    - name: ns-policy-50percent
+      version: v1
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-eks-cluster-stg
+  resourceQuotas: {}

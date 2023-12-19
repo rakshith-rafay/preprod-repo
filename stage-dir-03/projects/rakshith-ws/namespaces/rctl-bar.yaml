@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: rctl-bar
+  project: rakshith-ws
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams:
+    meshEnabled: true
+    policies:
+    - name: enable-strict-mtls
+      version: version-1668498277
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-rctl-eks-cluster
+  resourceQuotas: {}

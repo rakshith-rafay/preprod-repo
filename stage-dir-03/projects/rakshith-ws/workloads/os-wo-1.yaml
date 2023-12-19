@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: os-wo-1
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://httpbin.yaml
+    options: {}
+    type: Yaml
+  namespace: os-ns-3
+  placement:
+    selector: rafay.dev/clusterName=rakshith-imp-os-cluster
+  version: v1

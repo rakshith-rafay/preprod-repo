@@ -1,0 +1,13 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: rctl-workload-sleep
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: test-repo-1
+  placement:
+    selector: rafay.dev/clusterName=rakshith-eks-cluster-stg
+  version: v1

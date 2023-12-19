@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: addon-override-systemtogit
+  project: rakshith-ws
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-aks-stage-01
+  resource:
+    selector:
+      name: aabbcc
+    type: Addon
+  type: Yaml
+  valuesPath:
+    name: file://addon-override-systemtogit/addon-override-systemtogit.yaml
