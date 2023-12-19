@@ -7,6 +7,19 @@ metadata:
   name: workload-override-02
   project: rakshith-ws
 spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-aks-stage-01
+  repo:
+    path:
+      name: stage-dir-01/projects/rakshith-ws/yaml-override.yaml
+    repository: repo-3
+    revision: main
   resource:
+    selector:
+      name: foo
     type: Workload
   type: Yaml
+  valuesPath:
+    name: file://workload-override-02/workload-override-02.yaml
