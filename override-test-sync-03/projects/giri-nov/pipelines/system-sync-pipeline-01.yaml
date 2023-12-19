@@ -8,11 +8,12 @@ spec:
   stages:
   - config:
       destinationRepo: {}
-      gitToSystemSync: true
-      includedResources:
-      - name: Pipeline
+      excludedResources:
       - name: AddonOverride
       - name: Override
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
       sourceAsDestination: true
       sourceRepo:
         path:
