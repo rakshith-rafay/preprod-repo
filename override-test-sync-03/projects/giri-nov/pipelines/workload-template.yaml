@@ -1,0 +1,19 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: workload-template
+  project: giri-nov
+spec:
+  active: true
+  stages:
+  - config:
+      namespace: workload-temp-ns
+      placement:
+        labels:
+        - key: rafay.dev/clusterName
+          value: giri-dec15-qc1
+      projectName: giri-nov
+      workloadName: giri-dec15-qc1
+      workloadTemplate: workload-template-01
+    name: pp1
+    type: DeployWorkloadTemplate

@@ -1,0 +1,23 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: testing
+  description: testing
+  labels:
+    ns: new
+  name: new
+  project: giri-nov
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  networkPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-dec18-demo1
+    - key: rafay.dev/clusterName
+      value: giri-dec18-demo2
+  resourceQuotas: {}

@@ -1,0 +1,10 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: ""
+  name: ns-03
+  project: giri-nov
+spec:
+  namespaceMeshPolicyParams: {}
+  resourceQuotas: {}

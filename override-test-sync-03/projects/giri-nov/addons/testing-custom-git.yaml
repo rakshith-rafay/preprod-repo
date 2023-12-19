@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: testing-custom-git
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      configmap:
+        name: file://testing-custom-git/alertmanager-configMap.yaml
+      configuration:
+        name: file://testing-custom-git/alertmanager-configuration.yaml
+      secret:
+        name: file://testing-custom-git/alertmanager-secret.yaml
+      statefulset:
+        name: file://testing-custom-git/alertmanager-statefulSet.yaml
+    type: AlertManager
+  sharing: {}
+  version: version1

@@ -1,0 +1,10 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: yaml-wor
+  project: giri-nov
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: ns-03

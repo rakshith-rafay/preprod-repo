@@ -1,0 +1,35 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: system-sync-pipeline-01
+  project: giri-nov
+spec:
+  active: true
+  stages:
+  - config:
+      destinationRepo: {}
+      excludedResources:
+      - name: AddonOverride
+      - name: Override
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: override-test-sync-03
+        repository: test-repo-01
+        revision: main
+      systemToGitSync: true
+    name: pppp1
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: override-test-sync-03
+        provider: Github
+        repository: test-repo-01
+        revision: main
+    name: ttt1
+    type: Webhook

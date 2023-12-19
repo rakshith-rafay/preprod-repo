@@ -1,0 +1,25 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  labels:
+    kubernetes.io/metadata.name: calico-system
+    name: calico-system
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/enforce-version: latest
+  name: calico-system
+  project: giri-nov
+spec:
+  drift:
+    action: Deny
+    enabled: true
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-mks-nov15
+    - key: rafay.dev/clusterName
+      value: giri-az16
+    - key: rafay.dev/clusterName
+      value: giri-az14
+    - key: rafay.dev/clusterName
+      value: giri-az1-qc-dec7
