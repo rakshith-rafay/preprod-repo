@@ -7,6 +7,14 @@ metadata:
   name: work-override-01
   project: rakshith-ws
 spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-aks-stage-01
   resource:
+    selector:
+      name: bar
     type: Workload
   type: Yaml
+  valuesPath:
+    name: file://work-override-01/work-override-01.yaml
