@@ -7,6 +7,19 @@ metadata:
   name: workload-helm-04
   project: rakshith-ws
 spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-aks-stage-01
+  repo:
+    path:
+      name: stage-dir-01/projects/rakshith-ws/helm-yaml.yaml
+    repository: repo-3
+    revision: main
   resource:
+    selector:
+      name: csi-workload
     type: Workload
   type: Helm
+  valuesPath:
+    name: file://workload-helm-04/workload-helm-04.yaml
