@@ -1,0 +1,16 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: cert-manager
+  project: rakshith-ws
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/cert-manager/cert-manager-v1.9.1.tgz
+      valuesPaths:
+      - name: file://artifacts/cert-manager/values-file-for-cert-manager.yaml
+    type: Helm
+  namespace: cert-manager
+  sharing: {}
+  version: v1-cert-manager
