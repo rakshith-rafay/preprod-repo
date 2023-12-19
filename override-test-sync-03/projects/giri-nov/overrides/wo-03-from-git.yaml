@@ -1,0 +1,25 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Override
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: wo-03-from-git
+  project: giri-nov
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-dec18-demo2
+  repo:
+    path:
+      name: override-test-sync-02/projects/ngnix-01.yaml
+    repository: test-repo-01
+    revision: main
+  resource:
+    selector:
+      name: yaml-wor
+    type: Workload
+  type: Yaml
+  valuesPath:
+    name: file://wo-03-from-git/wo-03-from-git.yaml
