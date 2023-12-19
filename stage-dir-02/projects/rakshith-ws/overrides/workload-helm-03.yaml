@@ -7,6 +7,14 @@ metadata:
   name: workload-helm-03
   project: rakshith-ws
 spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: rakshith-aks-stage-01
   resource:
+    selector:
+      name: helm-wor
     type: Workload
   type: Helm
+  valuesPath:
+    name: file://workload-helm-03/workload-helm-03.yaml
